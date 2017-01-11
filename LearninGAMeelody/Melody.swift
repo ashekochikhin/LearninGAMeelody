@@ -93,10 +93,6 @@ func playMelody(melody: Notes)->Void{
     var mixer = AKMixer()
     var pumper: AKCompressor?
     
-    let currentTempo = 400.0
-    let sequenceLength = AKDuration(beats: Double(melodyLengthIn16/4), tempo: currentTempo)
-    
-
     
     
     fmOscillator.modulatingMultiplier = 3
@@ -125,14 +121,13 @@ func playMelody(melody: Notes)->Void{
     
     sequence.newTrack()
     sequence.tracks[0].setMIDIOutput(melodicSound!.midiIn)
-//    sequence.setLength(sequenceLength)
-//    sequence.setTempo(currentTempo)
+
 //    
     var position = Double(0)
     for i in 0..<notes.count{
-        var duration = Double(notes[i][1]/4)
+        var duration = Double(notes[i][1]/8)
         
-        sequence.tracks[0].add(noteNumber: notes[i][2]+60, velocity: notes[i][0]*100, position: AKDuration(beats: position,tempo: currentTempo), duration: AKDuration(beats: duration, tempo: currentTempo))
+        sequence.tracks[0].add(noteNumber: notes[i][2]+60, velocity: notes[i][0]*100, position: AKDuration(beats: position), duration: AKDuration(beats: duration))
         position = position + duration
         
     }

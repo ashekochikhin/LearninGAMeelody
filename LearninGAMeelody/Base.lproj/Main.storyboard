@@ -150,9 +150,9 @@
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SwI-Ne-dTh">
                                                 <rect key="frame" x="0.0" y="128.5" width="760" height="44"/>
                                                 <segments>
-                                                    <segment title="Calm"/>
+                                                    <segment title="Melanholy"/>
                                                     <segment title="Ordinal"/>
-                                                    <segment title="Haotic"/>
+                                                    <segment title="Merry"/>
                                                 </segments>
                                             </segmentedControl>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melody" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMB-fQ-Fqc">
@@ -164,8 +164,8 @@
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="O1w-Or-HDa">
                                                 <rect key="frame" x="0.0" y="214.5" width="760" height="43.5"/>
                                                 <segments>
-                                                    <segment title="Calm"/>
-                                                    <segment title="Ordinal"/>
+                                                    <segment title="Boring"/>
+                                                    <segment title="Melodic"/>
                                                     <segment title="Haotic"/>
                                                 </segments>
                                             </segmentedControl>
@@ -282,9 +282,9 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BYN-Vk-hQ2">
                                         <rect key="frame" x="0.0" y="128.5" width="760" height="44"/>
                                         <segments>
-                                            <segment title="Calm"/>
+                                            <segment title="Melanholy"/>
                                             <segment title="Ordinal"/>
-                                            <segment title="Haotic"/>
+                                            <segment title="Merry"/>
                                         </segments>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melody" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjX-H1-lhP">
@@ -296,8 +296,8 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j1r-rL-GeQ">
                                         <rect key="frame" x="0.0" y="214.5" width="760" height="43.5"/>
                                         <segments>
-                                            <segment title="Calm"/>
-                                            <segment title="Ordinal"/>
+                                            <segment title="Boring"/>
+                                            <segment title="Melodic"/>
                                             <segment title="Haotic"/>
                                         </segments>
                                     </segmentedControl>
