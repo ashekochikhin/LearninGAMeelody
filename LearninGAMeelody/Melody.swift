@@ -82,7 +82,7 @@ func makeMelodyInNotesOfRules(_melody: Int, _mode: Int, _rhythm: Int) -> Notes{
 
 func playMelody(melody: Notes)->Void{
     let notes = melody.notes
-//    AudioKit.stop()
+    AudioKit.stop()
     
     var midi = AKMIDI()
     var fmOscillator = AKFMOscillatorBank()
