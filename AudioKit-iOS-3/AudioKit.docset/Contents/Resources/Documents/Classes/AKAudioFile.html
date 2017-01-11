@@ -1,0 +1,3478 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AKAudioFile Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/AKAudioFile" class="dashAnchor"></a>
+    <a title="AKAudioFile Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AudioKit Docs</a> (94% documented)</p>
+        <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AudioKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        AKAudioFile Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../AudioKit Core.html">AudioKit Core</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AudioKit.html">AudioKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAudioFile.html">AKAudioFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAudioFile/BaseDirectory.html">– BaseDirectory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAudioFile/ExportFormat.html">– ExportFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDevice.html">AKDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNodeRecorder.html">AKNodeRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSettings.html">AKSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSettings/SessionCategory.html">– SessionCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSettings/BufferLength.html">– BufferLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKTable.html">AKTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKTableType.html">AKTableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTester.html">AKTester</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../MIDI.html">MIDI</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDI.html">AKMIDI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKMIDIEvent.html">AKMIDIEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKMIDIControl.html">AKMIDIControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDIInstrument.html">AKMIDIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDINode.html">AKMIDINode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDISampler.html">AKMIDISampler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKMIDIStatus.html">AKMIDIStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKMIDISystemCommand.html">AKMIDISystemCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MIDIPacket.html">MIDIPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MIDIPacketList.html">MIDIPacketList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MIDIPacketListGenerator.html">MIDIPacketListGenerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKCallbackInstrument.html">AKCallbackInstrument</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Sequencer.html">Sequencer</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKSequencer.html">AKSequencer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKDuration.html">AKDuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMusicTrack.html">AKMusicTrack</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Nodes.html">Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKNode.html">AKNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKPolyphonic.html">AKPolyphonic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPolyphonicNode.html">AKPolyphonicNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKToggleable.html">AKToggleable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKOperationGenerator.html">AKOperationGenerator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Analysis Nodes.html">Analysis Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAmplitudeTracker.html">AKAmplitudeTracker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFrequencyTracker.html">AKFrequencyTracker</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Delay Nodes.html">Delay Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKDelay.html">AKDelay</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVariableDelay.html">AKVariableDelay</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Distortion Nodes.html">Distortion Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKBitCrusher.html">AKBitCrusher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKClipper.html">AKClipper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDecimator.html">AKDecimator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDistortion.html">AKDistortion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKRingModulator.html">AKRingModulator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTanhDistortion.html">AKTanhDistortion</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Dynamics Nodes.html">Dynamics Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKCompressor.html">AKCompressor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDynamicsProcessor.html">AKDynamicsProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKExpander.html">AKExpander</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPeakLimiter.html">AKPeakLimiter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Effects Nodes.html">Effects Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKOperationEffect.html">AKOperationEffect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPitchShifter.html">AKPitchShifter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Envelopes.html">Envelopes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAmplitudeEnvelope.html">AKAmplitudeEnvelope</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTremolo.html">AKTremolo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Filter Nodes.html">Filter Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAutoWah.html">AKAutoWah</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBandPassButterworthFilter.html">AKBandPassButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBandPassFilter.html">AKBandPassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBandRejectButterworthFilter.html">AKBandRejectButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKCombFilterReverb.html">AKCombFilterReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDCBlock.html">AKDCBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKEqualizerFilter.html">AKEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFormantFilter.html">AKFormantFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKHighPassButterworthFilter.html">AKHighPassButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKHighPassFilter.html">AKHighPassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKHighShelfFilter.html">AKHighShelfFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKHighShelfParametricEqualizerFilter.html">AKHighShelfParametricEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKKorgLowPassFilter.html">AKKorgLowPassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKLowPassButterworthFilter.html">AKLowPassButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKLowPassFilter.html">AKLowPassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKLowShelfFilter.html">AKLowShelfFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKLowShelfParametricEqualizerFilter.html">AKLowShelfParametricEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKModalResonanceFilter.html">AKModalResonanceFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMoogLadder.html">AKMoogLadder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKParametricEQ.html">AKParametricEQ</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPeakingParametricEqualizerFilter.html">AKPeakingParametricEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKResonantFilter.html">AKResonantFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKRolandTB303Filter.html">AKRolandTB303Filter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStringResonator.html">AKStringResonator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKThreePoleLowpassFilter.html">AKThreePoleLowpassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKToneFilter.html">AKToneFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKToneComplementFilter.html">AKToneComplementFilter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Reverb Nodes.html">Reverb Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKChowningReverb.html">AKChowningReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKCostelloReverb.html">AKCostelloReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKConvolution.html">AKConvolution</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFlatFrequencyResponseReverb.html">AKFlatFrequencyResponseReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKReverb.html">AKReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKReverb2.html">AKReverb2</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Noise Generator Nodes.html">Noise Generator Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKPinkNoise.html">AKPinkNoise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKWhiteNoise.html">AKWhiteNoise</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Oscillator Nodes.html">Oscillator Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKFMOscillator.html">AKFMOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFMOscillatorBank.html">AKFMOscillatorBank</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMorphingOscillator.html">AKMorphingOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMorphingOscillatorBank.html">AKMorphingOscillatorBank</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKOscillator.html">AKOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKOscillatorBank.html">AKOscillatorBank</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPhaseDistortionOscillator.html">AKPhaseDistortionOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPhaseDistortionOscillatorBank.html">AKPhaseDistortionOscillatorBank</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPWMOscillator.html">AKPWMOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPWMOscillatorBank.html">AKPWMOscillatorBank</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Physical Models.html">Physical Models</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKClarinet.html">AKClarinet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDrip.html">AKDrip</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFlute.html">AKFlute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMandolin.html">AKMandolin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMetalBar.html">AKMetalBar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPluckedString.html">AKPluckedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSynthKick.html">AKSynthKick</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSynthSnare.html">AKSynthSnare</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Input Node.html">Input Node</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKMicrophone.html">AKMicrophone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoInput.html">AKStereoInput</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Mixing Nodes.html">Mixing Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AK3DPanner.html">AK3DPanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBalancer.html">AKBalancer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBooster.html">AKBooster</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDryWetMixer.html">AKDryWetMixer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMixer.html">AKMixer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPanner.html">AKPanner</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Playback Nodes.html">Playback Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAudioPlayer.html">AKAudioPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPhaseLockedVocoder.html">AKPhaseLockedVocoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSampler.html">AKSampler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTimePitch.html">AKTimePitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVariSpeed.html">AKVariSpeed</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Operations.html">Operations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AKParameter.html">AKParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKComputedParameter.html">AKComputedParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKOperation.html">AKOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoOperation.html">AKStereoOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Numeric.html">Numeric</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Math.html">Math</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3absFCS_11AKOperationS0_">abs(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit4ceilFVS_10AKDurationS0_">ceil(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit5floorFCS_11AKOperationS0_">floor(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit5fractFCS_11AKOperationS0_">fract(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3logFCS_11AKOperationS0_">log(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit5log10FCS_11AKOperationS0_">log10(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3maxFTPS_19AKComputedParameter_PS0___CS_11AKOperation">max(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3maxFTPS_19AKComputedParameter_PS_11AKParameter__CS_11AKOperation">max(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3maxFTPS_11AKParameter_PS_19AKComputedParameter__CS_11AKOperation">max(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3minFTPS_19AKComputedParameter_PS0___CS_11AKOperation">min(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3minFTPS_19AKComputedParameter_PS_11AKParameter__CS_11AKOperation">min(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3minFTPS_11AKParameter_PS_19AKComputedParameter__CS_11AKOperation">min(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit5mixerFTPS_11AKParameter_PS0__7balancePS0___CS_11AKOperation">mixer(_:_:balance:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit5roundFCS_11AKOperationS0_">round(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1mFTPS_11AKParameter_PS0___CS_11AKOperation">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1mFTCS_17AKStereoOperationPS_11AKParameter__S0_">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1mFTPS_11AKParameter_CS_17AKStereoOperation_S1_">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1mFTPS_7Numeric_PS0___Sd">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1pFTVS_10AKDurationS0__S0_">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1pFTPS_7Numeric_PS0___Sd">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1pFTPS_11AKParameter_PS0___CS_11AKOperation">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1pFTCS_17AKStereoOperationS0__S0_">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1sFTPS_11AKParameter_PS0___CS_11AKOperation">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1sFTCS_17AKStereoOperationS0__S0_">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1sFTVS_10AKDurationS0__S0_">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1sFTPS_7Numeric_PS0___Sd">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1dFTPS_7Numeric_PS0___Sd">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1dFTPS_11AKParameter_PS0___CS_11AKOperation">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1dFTCS_17AKStereoOperationPS_11AKParameter__S0_">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi2eeFTVS_10AKDurationS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi2neFTVS_10AKDurationS0__Sb">!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1lFTVS_10AKDurationS0__Sb">&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi2leFTVS_10AKDurationS0__Sb">&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1gFTVS_10AKDurationS0__Sb">&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi2geFTVS_10AKDurationS0__Sb">&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1rFTVS_10AKDurationS0__S0_">%(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi2peFTRVS_10AKDurationS0__T_">+=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi2seFTRVS_10AKDurationS0__T_">-=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Random Number Generators.html">Random Number Generators</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Random Number Generators.html#/s:F8AudioKit6randomFTSdSd_Sd">random(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Plotting Tools.html">Plotting Tools</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKRollingOutputPlot.html">AKRollingOutputPlot</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNodeFFTPlot.html">AKNodeFFTPlot</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNodeOutputPlot.html">AKNodeOutputPlot</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKOutputWaveformPlot.html">AKOutputWaveformPlot</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Taps.html">Taps</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAmplitudeTap.html">AKAmplitudeTap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFFTTap.html">AKFFTTap</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../UI Elements.html">UI Elements</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKADSRView.html">AKADSRView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKButton.html">AKButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBypassButton.html">AKBypassButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKKeyboardView.html">AKKeyboardView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKKeyboardDelegate.html">AKKeyboardDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNotifications.html">AKNotifications</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPlaygroundLoop.html">AKPlaygroundLoop</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPlaygroundView.html">AKPlaygroundView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPresetLoaderView.html">AKPresetLoaderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPropertySlider.html">AKPropertySlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKResourcesAudioFileLoaderView.html">AKResourcesAudioFileLoaderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTelephoneView.html">AKTelephoneView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Global Variables.html">Other Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Global Variables.html#/s:v8AudioKit22filtersPlaygroundFilesGSaSS_">filtersPlaygroundFiles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Global Variables.html#/s:v8AudioKit23playbackPlaygroundFilesGSaSS_">playbackPlaygroundFiles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Global Variables.html#/s:v8AudioKit25processingPlaygroundFilesGSaSS_">processingPlaygroundFiles</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Enums.html">Other Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SampleTriggerMode.html">SampleTriggerMode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAudioEngine.html">AVAudioEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AudioUnit.html">AudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ClosedRange.html">ClosedRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OSStatus.html">OSStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RangeReplaceableCollection.html">RangeReplaceableCollection</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Functions.html">Other Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:F8AudioKitop1sFCS_17AKStereoOperationS0_">-(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:F8AudioKitop1sFPS_11AKParameter_CS_11AKOperation">-(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:F8AudioKit10CheckErrorFVs5Int32T_">CheckError(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:F8AudioKit6fourCCFSSVs6UInt32">fourCC(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Structs.html">Other Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Typealiases.html">Other Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit14AKMIDICallback">AKMIDICallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit15AKRawMIDIPacket">AKRawMIDIPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:E8AudioKitVSC14MIDIPacketList8Iterator">Iterator</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>AKAudioFile</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKAudioFile</span><span class="p">:</span> <span class="kt">AVAudioFile</span></code></pre>
+
+                </div>
+              </div>
+            <p>Audio file, inherits from AVAudioFile and adds functionality</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/embedded%20enums"></a>
+                <a name="//apple_ref/swift/Section/embedded enums" class="dashAnchor"></a>
+                <a href="#/embedded%20enums">
+                  <h3 class="section-name">embedded enums</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OC8AudioKit11AKAudioFile13BaseDirectory"></a>
+                    <a name="//apple_ref/swift/Enum/BaseDirectory" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OC8AudioKit11AKAudioFile13BaseDirectory">BaseDirectory</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Common places for files</p>
+
+<ul>
+<li>Temp:      Temp Directory</li>
+<li>Documents: Documents Directory</li>
+<li>Resources: Resources Directory (Shouldn&rsquo;t be used for writing / recording files)</li>
+<li>Custom: The same directory as the input file. This is mainly for OS X projects.</li>
+</ul>
+
+                        <a href="../Classes/AKAudioFile/BaseDirectory.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">BaseDirectory</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Public%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Public Properties" class="dashAnchor"></a>
+                <a href="#/Public%20Properties">
+                  <h3 class="section-name">Public Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile12samplesCountVs5Int64"></a>
+                    <a name="//apple_ref/swift/Property/samplesCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile12samplesCountVs5Int64">samplesCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The number of samples can be accessed by .length property,
+but samplesCount has a less ambiguous meaning</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">samplesCount</span><span class="p">:</span> <span class="kt">Int64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile10sampleRateSd"></a>
+                    <a name="//apple_ref/swift/Property/sampleRate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile10sampleRateSd">sampleRate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>strange that sampleRate is a Double and not an Integer !&hellip;</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">sampleRate</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile12channelCountVs6UInt32"></a>
+                    <a name="//apple_ref/swift/Property/channelCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile12channelCountVs6UInt32">channelCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Number of channels, 1 for mono, 2 for stereo&hellip;</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">channelCount</span><span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile8durationSd"></a>
+                    <a name="//apple_ref/swift/Property/duration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile8durationSd">duration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Duration in seconds</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">duration</span><span class="p">:</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile11interleavedSb"></a>
+                    <a name="//apple_ref/swift/Property/interleaved" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile11interleavedSb">interleaved</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>true if Audio Samples are interleaved</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">interleaved</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile8standardSb"></a>
+                    <a name="//apple_ref/swift/Property/standard" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile8standardSb">standard</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>true only if file format is <q>deinterleaved native-endian float (AVAudioPCMFormatFloat32)</q></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">standard</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile18commonFormatStringSS"></a>
+                    <a name="//apple_ref/swift/Property/commonFormatString" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile18commonFormatStringSS">commonFormatString</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Human-readable version of common format</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">commonFormatString</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile13directoryPathV10Foundation3URL"></a>
+                    <a name="//apple_ref/swift/Property/directoryPath" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile13directoryPathV10Foundation3URL">directoryPath</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>the directory path as a NSURL object</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">directoryPath</span><span class="p">:</span> <span class="kt">URL</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile21fileNamePlusExtensionSS"></a>
+                    <a name="//apple_ref/swift/Property/fileNamePlusExtension" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile21fileNamePlusExtensionSS">fileNamePlusExtension</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>the file name with extension as a String</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">fileNamePlusExtension</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile8fileNameSS"></a>
+                    <a name="//apple_ref/swift/Property/fileName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile8fileNameSS">fileName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>the file name without extension as a String</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile7fileExtSS"></a>
+                    <a name="//apple_ref/swift/Property/fileExt" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile7fileExtSS">fileExt</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>the file extension as a String (without <q>.</q>)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">fileExt</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile7avAssetCSo10AVURLAsset"></a>
+                    <a name="//apple_ref/swift/Property/avAsset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile7avAssetCSo10AVURLAsset">avAsset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an AVAsset from the AKAudioFile</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">avAsset</span><span class="p">:</span> <span class="kt">AVURLAsset</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile11descriptionSS"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile11descriptionSS">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>As The description doesn&rsquo;t provide so much informations, appended the fileFormat.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="n">open</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile14arraysOfFloatsGSaGSaSf__"></a>
+                    <a name="//apple_ref/swift/Property/arraysOfFloats" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile14arraysOfFloatsGSaGSaSf__">arraysOfFloats</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>returns audio data as an Array of float Arrays
+If stereo:
+    - arraysOfFloats[0] will contain an Array of left channel samples as Floats
+    - arraysOfFloats[1] will contains an Array of right channel samples as Floats</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">arraysOfFloats</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Float</span><span class="p">]]</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile9pcmBufferCSo16AVAudioPCMBuffer"></a>
+                    <a name="//apple_ref/swift/Property/pcmBuffer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile9pcmBufferCSo16AVAudioPCMBuffer">pcmBuffer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>returns audio data as an AVAudioPCMBuffer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">pcmBuffer</span><span class="p">:</span> <span class="kt">AVAudioPCMBuffer</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile8maxLevelSf"></a>
+                    <a name="//apple_ref/swift/Property/maxLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile8maxLevelSf">maxLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>returns the peak level expressed in dB ( -&gt; Float).</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">lazy</span> <span class="k">var</span> <span class="nv">maxLevel</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFilecFzT10forReadingV10Foundation3URL_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(forReading:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFilecFzT10forReadingV10Foundation3URL_S0_">init(forReading:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize the audio file</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="n">forReading</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>NSURL of the file</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An initialized AKAudioFile object for reading, or nil if init failed.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFilecFzT10forReadingV10Foundation3URL12commonFormatOSC19AVAudioCommonFormat11interleavedSb_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(forReading:commonFormat:interleaved:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFilecFzT10forReadingV10Foundation3URL12commonFormatOSC19AVAudioCommonFormat11interleavedSb_S0_">init(forReading:commonFormat:interleaved:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize the audio file</p>
+
+<ul>
+<li><p>Parameters:</p>
+
+<ul>
+<li>fileURL:     NSURL of the file</li>
+<li>format:      The processing commonFormat to use when reading from the file.</li>
+<li>interleaved: Whether to use an interleaved processing format.</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="n">forReading</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span>
+                         <span class="n">commonFormat</span> <span class="nv">format</span><span class="p">:</span> <span class="kt">AVAudioCommonFormat</span><span class="p">,</span>
+                         <span class="nv">interleaved</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>NSURL of the file</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The processing commonFormat to use when reading from the file.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interleaved</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether to use an interleaved processing format.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An initialized AKAudioFile object for reading, or nil if init failed.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFilecFzT10forWritingV10Foundation3URL8settingsGVs10DictionarySSP__12commonFormatOSC19AVAudioCommonFormat11interleavedSb_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(forWriting:settings:commonFormat:interleaved:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFilecFzT10forWritingV10Foundation3URL8settingsGVs10DictionarySSP__12commonFormatOSC19AVAudioCommonFormat11interleavedSb_S0_">init(forWriting:settings:commonFormat:interleaved:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize the audio file</p>
+
+<p>From Apple doc: The file type to create is inferred from the file extension of fileURL.
+This method will overwrite a file at the specified URL if a file already exists.</p>
+
+<p>The file is opened for writing using the standard format, AVAudioPCMFormatFloat32.</p>
+
+<p>Note: It seems that Apple&rsquo;s AVAudioFile class has a bug with .wav files. They cannot be set
+with a floating Point encoding. As a consequence, such files will fail to record properly.
+So it&rsquo;s better to use .caf (or .aif) files for recording purpose.</p>
+
+<p><li>Parameters:</p>
+
+<p><ul>
+<li>fileURL:     NSURL of the file.</li>
+<li>settings:    The format of the file to create.</li>
+<li>format:      The processing commonFormat to use when writing.</li>
+<li>interleaved: Whether to use an interleaved processing format.</li>
+</ul></li>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    NSError if init failed</p>
+
+<p></div></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="n">forWriting</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span>
+                         <span class="nv">settings</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">],</span>
+                         <span class="n">commonFormat</span> <span class="nv">format</span><span class="p">:</span> <span class="kt">AVAudioCommonFormat</span><span class="p">,</span>
+                         <span class="nv">interleaved</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>NSURL of the file.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>settings</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The format of the file to create.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The processing commonFormat to use when writing.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interleaved</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Whether to use an interleaved processing format.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An initialized AKAudioFile for writing, or nil if init failed.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFilecFzT10forWritingV10Foundation3URL8settingsGVs10DictionarySSP___S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(forWriting:settings:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFilecFzT10forWritingV10Foundation3URL8settingsGVs10DictionarySSP___S0_">init(forWriting:settings:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Super.init inherited from AVAudioFile superclass</p>
+
+<p><li><p>Parameters:</p></p>
+
+<p><ul>
+<li>fileURL: NSURL of the file.</li>
+<li>settings: The settings of the file to create.</li>
+</ul></li>
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <p>An initialized AKAudioFile for writing, or nil if init failed.</p></p>
+
+<p></div></p>
+
+<p>From Apple doc: The file type to create is inferred from the file extension of fileURL.
+This method will overwrite a file at the specified URL if a file already exists.</p>
+
+<p>The file is opened for writing using the standard format, AVAudioPCMFormatFloat32.</p>
+
+<p>Note: It seems that Apple&rsquo;s AVAudioFile class has a bug with .wav files. They cannot be set
+with a floating Point encoding. As a consequence, such files will fail to record properly.
+So it&rsquo;s better to use .caf (or .aif) files for recording purpose.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">(</span><span class="n">forWriting</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">settings</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">Any</span><span class="p">])</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileURL</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>NSURL of the file.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>settings</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The settings of the file to create.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An initialized AKAudioFile for writing, or nil if init failed.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile7samplerGSqCS_9AKSampler_"></a>
+                    <a name="//apple_ref/swift/Property/sampler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile7samplerGSqCS_9AKSampler_">sampler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create an AKSampler loaded with the current AKAudioFile</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">sampler</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKSampler.html">AKSampler</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile11midiSamplerGSqCS_13AKMIDISampler_"></a>
+                    <a name="//apple_ref/swift/Property/midiSampler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile11midiSamplerGSqCS_13AKMIDISampler_">midiSampler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create an AKMIDISampler loaded with the current AKAudioFile</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">midiSampler</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKMIDISampler.html">AKMIDISampler</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile6playerGSqCS_13AKAudioPlayer_"></a>
+                    <a name="//apple_ref/swift/Property/player" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile6playerGSqCS_13AKAudioPlayer_">player</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create an AKAudioPlayer to play the current AKAudioFile</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">player</span><span class="p">:</span><span class="kt"><a href="../Classes/AKAudioPlayer.html">AKAudioPlayer</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFile10normalizedFzT7baseDirOS0_13BaseDirectory4nameSS11newMaxLevelSf_S0_"></a>
+                    <a name="//apple_ref/swift/Method/normalized(baseDir:name:newMaxLevel:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFile10normalizedFzT7baseDirOS0_13BaseDirectory4nameSS11newMaxLevelSf_S0_">normalized(baseDir:name:newMaxLevel:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Normalize an AKAudioFile to have a peak of newMaxLevel dB.</p>
+
+<ul>
+<li><p>Parameters:</p>
+
+<ul>
+<li>baseDir:     where the file will be located, can be set to .Resources,  .Documents or .Temp</li>
+<li>name:        the name of the file without its extension (String).</li>
+<li>newMaxLevel: max level targeted as a Float value (default if 0 dB)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">normalized</span><span class="p">(</span><span class="nv">baseDir</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/BaseDirectory.html">BaseDirectory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">temp</span><span class="p">,</span>
+                           <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
+                           <span class="nv">newMaxLevel</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">0.0</span> <span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">AKAudioFile</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseDir</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>where the file will be located, can be set to .Resources,  .Documents or .Temp</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the name of the file without its extension (String).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>newMaxLevel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>max level targeted as a Float value (default if 0 dB)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An AKAudioFile, or nil if init failed.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFile8reversedFzT7baseDirOS0_13BaseDirectory4nameSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/reversed(baseDir:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFile8reversedFzT7baseDirOS0_13BaseDirectory4nameSS_S0_">reversed(baseDir:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an AKAudioFile with audio reversed (will playback in reverse from end to beginning).</p>
+
+<p><li><p>Parameters:</p></p>
+
+<p><ul>
+<li>baseDir: where the file will be located, can be set to .Resources,  .Documents or .Temp</li>
+<li>name: the name of the file without its extension (String).</li>
+</ul></li>
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <p>An AKAudioFile, or nil if init failed.</p></p>
+
+<p></div></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reversed</span><span class="p">(</span><span class="nv">baseDir</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/BaseDirectory.html">BaseDirectory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">temp</span><span class="p">,</span>
+                         <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span> <span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">AKAudioFile</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseDir</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>where the file will be located, can be set to .Resources,  .Documents or .Temp</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the name of the file without its extension (String).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An AKAudioFile, or nil if init failed.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFile10appendedByFzT4fileS0_7baseDirOS0_13BaseDirectory4nameSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/appendedBy(file:baseDir:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFile10appendedByFzT4fileS0_7baseDirOS0_13BaseDirectory4nameSS_S0_">appendedBy(file:baseDir:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an AKAudioFile with appended audio data from another AKAudioFile.</p>
+
+<p>Notice that Source file and appended file formats must match.</p>
+
+<p><li><p>Parameters:</p></p>
+
+<p><ul>
+<li>file: an AKAudioFile that will be used to append audio from.</li>
+<li>baseDir: where the file will be located, can be set to .Resources, .Documents or .Temp</li>
+<li>name: the name of the file without its extension (String).</li>
+</ul></li>
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <p>An AKAudioFile, or nil if init failed.</p></p>
+
+<p></div></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">appendedBy</span><span class="p">(</span><span class="nv">file</span><span class="p">:</span> <span class="kt">AKAudioFile</span><span class="p">,</span>
+                           <span class="nv">baseDir</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/BaseDirectory.html">BaseDirectory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">temp</span><span class="p">,</span>
+                           <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>  <span class="o">=</span> <span class="s">""</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">AKAudioFile</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>an AKAudioFile that will be used to append audio from.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseDir</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>where the file will be located, can be set to .Resources, .Documents or .Temp</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the name of the file without its extension (String).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An AKAudioFile, or nil if init failed.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFile9extractedFzT10fromSampleVs5Int648toSampleS1_7baseDirOS0_13BaseDirectory4nameSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/extracted(fromSample:toSample:baseDir:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFile9extractedFzT10fromSampleVs5Int648toSampleS1_7baseDirOS0_13BaseDirectory4nameSS_S0_">extracted(fromSample:toSample:baseDir:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an AKAudioFile that will contain a range of samples from the current AKAudioFile</p>
+
+<p><li><p>Parameters:</p></p>
+
+<p><ul>
+<li>fromSample: the starting sampleFrame for extraction.</li>
+<li>toSample: the ending sampleFrame for extraction</li>
+<li>baseDir: where the file will be located, can be set to .Resources, .Documents or .Temp</li>
+<li>name: the name of the file without its extension (String).</li>
+</ul></li>
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <p>An AKAudioFile, or nil if init failed.</p></p>
+
+<p></div></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">extracted</span><span class="p">(</span><span class="nv">fromSample</span><span class="p">:</span> <span class="kt">Int64</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                          <span class="nv">toSample</span><span class="p">:</span> <span class="kt">Int64</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                          <span class="nv">baseDir</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/BaseDirectory.html">BaseDirectory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">temp</span><span class="p">,</span>
+                          <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">AKAudioFile</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromSample</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the starting sampleFrame for extraction.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toSample</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the ending sampleFrame for extraction</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseDir</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>where the file will be located, can be set to .Resources, .Documents or .Temp</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the name of the file without its extension (String).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An AKAudioFile, or nil if init failed.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKAudioFile8mimeTypeGSqSS_"></a>
+                    <a name="//apple_ref/swift/Property/mimeType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKAudioFile8mimeTypeGSqSS_">mimeType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>returns file Mime Type if exists
+Otherwise, returns nil
+(useful when sending an AKAudioFile by email)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">mimeType</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKAudioFile18cleanTempDirectoryFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/cleanTempDirectory()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKAudioFile18cleanTempDirectoryFT_T_">cleanTempDirectory()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Static function to delete all audiofiles from Temp directory</p>
+
+<p>AKAudioFile.cleanTempDirectory()</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">cleanTempDirectory</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKAudioFile6silentFzT7samplesVs5Int647baseDirOS0_13BaseDirectory4nameSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/silent(samples:baseDir:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKAudioFile6silentFzT7samplesVs5Int647baseDirOS0_13BaseDirectory4nameSS_S0_">silent(samples:baseDir:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a silent AKAudioFile with a length set in samples.</p>
+
+<p>For a silent file of one second, set samples value to 44100&hellip;</p>
+
+<p><li><p>Parameters:</p></p>
+
+<p><ul>
+<li>samples: the number of samples to generate (equals length in seconds multiplied by sample rate)</li>
+<li>baseDir: where the file will be located, can be set to .Resources,  .Documents or .Temp</li>
+<li>name: the name of the file without its extension (String).</li>
+</ul></li>
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <p>An AKAudioFile, or nil if init failed.</p></p>
+
+<p></div></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">silent</span><span class="p">(</span><span class="nv">samples</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span>
+                              <span class="nv">baseDir</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/BaseDirectory.html">BaseDirectory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">temp</span><span class="p">,</span>
+                              <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">AKAudioFile</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>samples</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the number of samples to generate (equals length in seconds multiplied by sample rate)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseDir</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>where the file will be located, can be set to .Resources,  .Documents or .Temp</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the name of the file without its extension (String).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An AKAudioFile, or nil if init failed.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFilecFzT12readFileNameSS7baseDirOS0_13BaseDirectory_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(readFileName:baseDir:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFilecFzT12readFileNameSS7baseDirOS0_13BaseDirectory_S0_">init(readFileName:baseDir:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Opens a file for reading.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">readFileName</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                            <span class="nv">baseDir</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/BaseDirectory.html">BaseDirectory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">resources</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Filename, including hte extension</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseDir</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Location of file, can be set to .Resources, .Documents or .Temp</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>An initialized AKAudioFile for reading, or nil if init failed</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFilecFzT7writeInOS0_13BaseDirectory4nameSS8settingsGVs10DictionarySSP___S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(writeIn:name:settings:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFilecFzT7writeInOS0_13BaseDirectory4nameSS8settingsGVs10DictionarySSP___S0_">init(writeIn:name:settings:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize file for recording / writing purpose</p>
+
+<p>Default is a .caf AKAudioFile with AudioKit settings
+If file name is an empty String, a unique Name will be set
+If no baseDir is set, baseDir will be the Temp Directory</p>
+
+<p>From Apple doc: The file type to create is inferred from the file extension of fileURL.
+This method will overwrite a file at the specified URL if a file already exists.</p>
+
+<p>Note: It seems that Apple&rsquo;s AVAudioFile class has a bug with .wav files. They cannot be set
+with a floating Point encoding. As a consequence, such files will fail to record properly.
+So it&rsquo;s better to use .caf (or .aif) files for recording purpose.</p>
+
+<p>Example of use: to create a temp .caf file with a unique name for recording:
+let recordFile = AKAudioFile()</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>name: the name of the file without its extension (String).</li>
+<li>ext: the extension of the file without <q>.</q> (String).</li>
+<li>baseDir: where the file will be located, can be set to .Resources, .Documents or .Temp</li>
+<li>settings: The settings of the file to create.</li>
+<li>format: The processing commonFormat to use when writing.</li>
+<li>interleaved: Bool (Whether to use an interleaved processing format.)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">writeIn</span> <span class="nv">baseDir</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/BaseDirectory.html">BaseDirectory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">temp</span><span class="p">,</span>
+                            <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
+                            <span class="nv">settings</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]</span> <span class="o">=</span> <span class="kt"><a href="../Classes/AKSettings.html">AKSettings</a></span><span class="o">.</span><span class="n">audioFormat</span><span class="o">.</span><span class="n">settings</span><span class="p">)</span>
+        <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the name of the file without its extension (String).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ext</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the extension of the file without “.” (String).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseDir</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>where the file will be located, can be set to .Resources, .Documents or .Temp</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>settings</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The settings of the file to create.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>format</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The processing commonFormat to use when writing.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>interleaved</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bool (Whether to use an interleaved processing format.)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFilecFzT20createFileFromFloatsGSaGSaSf__7baseDirOS0_13BaseDirectory4nameSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(createFileFromFloats:baseDir:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFilecFzT20createFileFromFloatsGSaGSaSf__7baseDirOS0_13BaseDirectory4nameSS_S0_">init(createFileFromFloats:baseDir:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instantiate a file from Floats Arrays.</p>
+
+<p>To create a stereo file, you pass [leftChannelFloats, rightChannelFloats]
+where leftChannelFloats and rightChannelFloats are 2 arrays of FLoat values.
+Arrays must both have the same number of Floats.</p>
+
+<p><li><p>Parameters:</p></p>
+
+<p><ul>
+<li>floatsArrays: An array of Arrays of floats</li>
+<li>name: the name of the file without its extension (String).</li>
+<li>baseDir: where the file will be located, can be set to .Resources,  .Documents or .Temp</li>
+</ul></li>
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <p>a .caf AKAudioFile set to AudioKit settings (32 bits float @ 44100 Hz)</p></p>
+
+<p></div></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">createFileFromFloats</span> <span class="nv">floatsArrays</span><span class="p">:</span> <span class="p">[[</span><span class="kt">Float</span><span class="p">]],</span>
+                            <span class="nv">baseDir</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/BaseDirectory.html">BaseDirectory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">temp</span><span class="p">,</span>
+                            <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>floatsArrays</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An array of Arrays of floats</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the name of the file without its extension (String).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseDir</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>where the file will be located, can be set to .Resources,  .Documents or .Temp</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a .caf AKAudioFile set to AudioKit settings (32 bits float @ 44100 Hz)</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFilecFzT20fromAVAudioPCMBufferCSo16AVAudioPCMBuffer7baseDirOS0_13BaseDirectory4nameSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(fromAVAudioPCMBuffer:baseDir:name:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFilecFzT20fromAVAudioPCMBufferCSo16AVAudioPCMBuffer7baseDirOS0_13BaseDirectory4nameSS_S0_">init(fromAVAudioPCMBuffer:baseDir:name:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience init to instantiate a file from an AVAudioPCMBuffer.</p>
+
+<p><li><p>Parameters:</p></p>
+
+<p><ul>
+<li>buffer: the :AVAudioPCMBuffer that will be used to fill the AKAudioFile</li>
+<li>baseDir: where the file will be located, can be set to .Resources, .Documents or .Temp</li>
+<li>name: the name of the file without its extension (String).</li>
+</ul></li>
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    <p>a .caf AKAudioFile set to AudioKit settings (32 bits float @ 44100 Hz)</p></p>
+
+<p></div></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">fromAVAudioPCMBuffer</span> <span class="nv">buffer</span><span class="p">:</span> <span class="kt">AVAudioPCMBuffer</span><span class="p">,</span>
+                            <span class="nv">baseDir</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/BaseDirectory.html">BaseDirectory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">temp</span><span class="p">,</span>
+                            <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>buffer</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the :AVAudioPCMBuffer that will be used to fill the AKAudioFile</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseDir</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>where the file will be located, can be set to .Resources, .Documents or .Temp</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the name of the file without its extension (String).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a .caf AKAudioFile set to AudioKit settings (32 bits float @ 44100 Hz)</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OC8AudioKit11AKAudioFile12ExportFormat"></a>
+                    <a name="//apple_ref/swift/Enum/ExportFormat" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OC8AudioKit11AKAudioFile12ExportFormat">ExportFormat</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>ExportFormat enum to set target format when exporting AKAudiofiles</p>
+
+<ul>
+<li>wav: Waveform Audio File Format (WAVE, or more commonly known as WAV due to its filename extension)</li>
+<li>aif: Audio Interchange File Format</li>
+<li>mp4: MPEG-4 Part 14 Compression</li>
+<li>m4a: MPEG 4 Audio</li>
+<li>caf: Core Audio Format</li>
+</ul>
+
+                        <a href="../Classes/AKAudioFile/ExportFormat.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ExportFormat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/AKAudioFile%20public%20interface%20with%20private%20AKAudioFile%20ProcessFactory%20singleton"></a>
+                <a name="//apple_ref/swift/Section/AKAudioFile public interface with private AKAudioFile ProcessFactory singleton" class="dashAnchor"></a>
+                <a href="#/AKAudioFile%20public%20interface%20with%20private%20AKAudioFile%20ProcessFactory%20singleton">
+                  <h3 class="section-name">AKAudioFile public interface with private AKAudioFile ProcessFactory singleton</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC8AudioKit11AKAudioFile23queuedAsyncProcessCountSi"></a>
+                    <a name="//apple_ref/swift/Variable/queuedAsyncProcessCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC8AudioKit11AKAudioFile23queuedAsyncProcessCountSi">queuedAsyncProcessCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the remaining not completed queued Async processes (Int)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">queuedAsyncProcessCount</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC8AudioKit11AKAudioFile28scheduledAsyncProcessesCountSi"></a>
+                    <a name="//apple_ref/swift/Variable/scheduledAsyncProcessesCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC8AudioKit11AKAudioFile28scheduledAsyncProcessesCountSi">scheduledAsyncProcessesCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the total scheduled Async processes count (Int)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">scheduledAsyncProcessesCount</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC8AudioKit11AKAudioFile28completedAsyncProcessesCountSi"></a>
+                    <a name="//apple_ref/swift/Variable/completedAsyncProcessesCount" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC8AudioKit11AKAudioFile28completedAsyncProcessesCountSi">completedAsyncProcessesCount</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the completed Async processes count (Int)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="kd">public</span> <span class="k">var</span> <span class="nv">completedAsyncProcessesCount</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFile23normalizeAsynchronouslyFT7baseDirOS0_13BaseDirectory4nameSS11newMaxLevelSf17completionHandlerFTGSqS0__GSqCSo7NSError__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/normalizeAsynchronously(baseDir:name:newMaxLevel:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFile23normalizeAsynchronouslyFT7baseDirOS0_13BaseDirectory4nameSS11newMaxLevelSf17completionHandlerFTGSqS0__GSqCSo7NSError__T__T_">normalizeAsynchronously(baseDir:name:newMaxLevel:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Process the current AKAudioFile in background to return an
+AKAudioFile normalized with a peak of newMaxLevel dB if succeeded</p>
+
+<p>Completion Handler is function with an AKAudioFile.AsyncProcessCallback signature:
+<code>
+func myCallback(processedFile:AKAudioFile?, error:NSError?) -&gt; Void
+</code></p>
+
+<p>in this callback, you can check that process succeeded by testing processedFile value :
+. if processedFile != nil, process succeded (and error is nil)
+. if processedFile == nil, process failed, error is the process thrown error</p>
+
+<p>Notice that completionCallBack will be triggered from a
+background thread. Any UI update should be made using:</p>
+
+<pre class="highlight plaintext"><code>dispatch_async(dispatch_get_main_queue()) {
+  // UI updates...
+}
+</code></pre>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>completionHandler: the callback that will be triggered when process has been completed</li>
+<li>baseDir: where the file will be located, can be set to .Resources, .Documents or .Temp (Default is .Temp)</li>
+<li>name: the name of the resulting file without its extension (String).</li>
+<li>newMaxLevel: max level targeted as a Float value (default if 0 dB)</li>
+<li>completionCallBack : AKCallback that will be triggered as soon as process has been completed or failed.</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">normalizeAsynchronously</span><span class="p">(</span><span class="nv">baseDir</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/BaseDirectory.html">BaseDirectory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">temp</span><span class="p">,</span>
+                                        <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
+                                        <span class="nv">newMaxLevel</span><span class="p">:</span> <span class="kt">Float</span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+                                        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the callback that will be triggered when process has been completed</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseDir</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>where the file will be located, can be set to .Resources, .Documents or .Temp (Default is .Temp)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the name of the resulting file without its extension (String).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>newMaxLevel</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>max level targeted as a Float value (default if 0 dB)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionCallBack</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>AKCallback that will be triggered as soon as process has been completed or failed.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFile21reverseAsynchronouslyFT7baseDirOS0_13BaseDirectory4nameSS17completionHandlerFTGSqS0__GSqCSo7NSError__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/reverseAsynchronously(baseDir:name:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFile21reverseAsynchronouslyFT7baseDirOS0_13BaseDirectory4nameSS17completionHandlerFTGSqS0__GSqCSo7NSError__T__T_">reverseAsynchronously(baseDir:name:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Process the current AKAudioFile in background to return the current AKAudioFile reversed (will play backward)</p>
+
+<p>Completion Handler is function with an AKAudioFile.AsyncProcessCallback signature:
+<code>
+func myCallback(processedFile:AKAudioFile?, error:NSError?) -&gt; Void
+</code></p>
+
+<p>in this callback, you can check that process succeeded by testing processedFile value :
+. if processedFile != nil, process succeded (and error is nil)
+. if processedFile == nil, process failed, error is the process thrown error</p>
+
+<p>Notice that completionCallBack will be triggered from a
+background thread. Any UI update should be made using:</p>
+
+<pre class="highlight plaintext"><code>dispatch_async(dispatch_get_main_queue()) {
+  // UI updates...
+}
+</code></pre>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>completionHandler: the callback that will be triggered when process has been completed</li>
+<li>baseDir: where the file will be located, can be set to .Resources, .Documents or .Temp (Default is .Temp)</li>
+<li>name: the name of the resulting file without its extension (String).</li>
+<li>completionCallBack : AKCallback that will be triggered as soon as process has been completed or failed.</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reverseAsynchronously</span><span class="p">(</span><span class="nv">baseDir</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/BaseDirectory.html">BaseDirectory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">temp</span><span class="p">,</span>
+                                      <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
+                                      <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the callback that will be triggered when process has been completed</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseDir</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>where the file will be located, can be set to .Resources, .Documents or .Temp (Default is .Temp)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the name of the resulting file without its extension (String).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionCallBack</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>AKCallback that will be triggered as soon as process has been completed or failed.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFile20appendAsynchronouslyFT4fileS0_7baseDirOS0_13BaseDirectory4nameSS17completionHandlerFTGSqS0__GSqCSo7NSError__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/appendAsynchronously(file:baseDir:name:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFile20appendAsynchronouslyFT4fileS0_7baseDirOS0_13BaseDirectory4nameSS17completionHandlerFTGSqS0__GSqCSo7NSError__T__T_">appendAsynchronously(file:baseDir:name:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Process the current AKAudioFile in background to return an AKAudioFile with appended audio data from another AKAudioFile.</p>
+
+<p>Completion Handler is function with an AKAudioFile.AsyncProcessCallback signature:
+<code>
+func myCallback(processedFile:AKAudioFile?, error:NSError?) -&gt; Void
+</code></p>
+
+<p>in this callback, you can check that process succeeded by testing processedFile value :
+. if processedFile != nil, process succeded (and error is nil)
+. if processedFile == nil, process failed, error is the process thrown error</p>
+
+<p>Notice that completionCallBack will be triggered from a
+background thread. Any UI update should be made using:</p>
+
+<pre class="highlight plaintext"><code>dispatch_async(dispatch_get_main_queue()) {
+  // UI updates...
+}
+</code></pre>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>completionHandler: the callback that will be triggered when process has been completed</li>
+<li>file: an AKAudioFile that will be used to append audio from.</li>
+<li>baseDir: where the file will be located, can be set to .Resources, .Documents or .Temp (Default is .Temp)</li>
+<li>name: the name of the resulting file without its extension (String).</li>
+<li>completionCallBack : AKCallback that will be triggered as soon as process has been completed or failed.</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">appendAsynchronously</span><span class="p">(</span><span class="nv">file</span><span class="p">:</span> <span class="kt">AKAudioFile</span><span class="p">,</span>
+                                     <span class="nv">baseDir</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/BaseDirectory.html">BaseDirectory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">temp</span><span class="p">,</span>
+                                     <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
+                                     <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the callback that will be triggered when process has been completed</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>an AKAudioFile that will be used to append audio from.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseDir</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>where the file will be located, can be set to .Resources, .Documents or .Temp (Default is .Temp)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the name of the resulting file without its extension (String).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionCallBack</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>AKCallback that will be triggered as soon as process has been completed or failed.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFile21extractAsynchronouslyFT10fromSampleVs5Int648toSampleS1_7baseDirOS0_13BaseDirectory4nameSS17completionHandlerFTGSqS0__GSqCSo7NSError__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/extractAsynchronously(fromSample:toSample:baseDir:name:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFile21extractAsynchronouslyFT10fromSampleVs5Int648toSampleS1_7baseDirOS0_13BaseDirectory4nameSS17completionHandlerFTGSqS0__GSqCSo7NSError__T__T_">extractAsynchronously(fromSample:toSample:baseDir:name:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Process the current AKAudioFile in background to return an AKAudioFile with an extracted range of audio data.</p>
+
+<p>if <q>toSample</q> parameter is set to zero, it will be set to be the number of samples of the file, so extraction will go from fromSample value to the end of file.</p>
+
+<p>Completion Handler is function with an AKAudioFile.AsyncProcessCallback signature:
+<code>
+func myCallback(processedFile:AKAudioFile?, error:NSError?) -&gt; Void
+</code></p>
+
+<p>in this callback, you can check that process succeeded by testing processedFile value :
+. if processedFile != nil, process succeded (and error is nil)
+. if processedFile == nil, process failed, error is the process thrown error</p>
+
+<p>Notice that completionCallBack will be triggered from a
+background thread. Any UI update should be made using:</p>
+
+<pre class="highlight plaintext"><code>dispatch_async(dispatch_get_main_queue()) {
+  // UI updates...
+}
+</code></pre>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>completionHandler: the callback that will be triggered when process has been completed</li>
+<li>fromSample: the starting sampleFrame for extraction. (default is zero)</li>
+<li>toSample: the ending sampleFrame for extraction (default is zero)</li>
+<li>baseDir: where the file will be located, can be set to .Resources,  .Documents or .Temp (Default is .Temp)</li>
+<li>name: the name of the resulting file without its extension (String).</li>
+<li>completionCallBack : AKCallback that will be triggered as soon as process has been completed or failed.</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">extractAsynchronously</span><span class="p">(</span><span class="nv">fromSample</span><span class="p">:</span> <span class="kt">Int64</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                                      <span class="nv">toSample</span><span class="p">:</span> <span class="kt">Int64</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                                      <span class="nv">baseDir</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/BaseDirectory.html">BaseDirectory</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">temp</span><span class="p">,</span>
+                                      <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>
+                                      <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the callback that will be triggered when process has been completed</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromSample</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the starting sampleFrame for extraction. (default is zero)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toSample</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the ending sampleFrame for extraction (default is zero)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseDir</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>where the file will be located, can be set to .Resources,  .Documents or .Temp (Default is .Temp)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the name of the resulting file without its extension (String).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionCallBack</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>AKCallback that will be triggered as soon as process has been completed or failed.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKAudioFile20exportAsynchronouslyFT4nameSS7baseDirOS0_13BaseDirectory12exportFormatOS0_12ExportFormat10fromSampleVs5Int648toSampleS3_8callbackFTGSqS0__GSqCSo7NSError__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/exportAsynchronously(name:baseDir:exportFormat:fromSample:toSample:callback:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKAudioFile20exportAsynchronouslyFT4nameSS7baseDirOS0_13BaseDirectory12exportFormatOS0_12ExportFormat10fromSampleVs5Int648toSampleS3_8callbackFTGSqS0__GSqCSo7NSError__T__T_">exportAsynchronously(name:baseDir:exportFormat:fromSample:toSample:callback:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Exports Asynchronously to a new AKAudiofile with trimming options.</p>
+
+<p>Can export from wav/aif/caf to wav/aif/m4a/mp4/caf
+Can export from m4a/mp4 to m4a/mp4
+Exporting from a compressed format to a PCM format (mp4/m4a to wav/aif/caf) is not supported.</p>
+
+<p>fromSample and toSample can be set to extract only a portion of the current AKAudioFile.
+If toSample is zero, it will be set to the file&rsquo;s duration (no end trimming)</p>
+
+<p>As soon as callback has been triggered, you can use ExportSession.status to
+check if export succeeded or not. If export succeeded, you can get the exported
+AKAudioFile using ExportSession.exportedAudioFile. ExportSession.progress
+lets you monitor export progress.</p>
+
+<p>See playground for an example of use.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>name: the name of the exported file without its extension (String).</li>
+<li>baseDir: where the file will be located, can be set to .Resources,  .Documents or .Temp</li>
+<li>ExportFormat: the output file format as an ExportFormat enum value (.aif, .wav, .m4a, .mp4, .caf)</li>
+<li>fromSample: start range in samples</li>
+<li>toSample: end range time in samples</li>
+<li>callback: AsyncProcessCallback function that will be triggered when export completed.</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">exportAsynchronously</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                                     <span class="nv">baseDir</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/BaseDirectory.html">BaseDirectory</a></span><span class="p">,</span>
+                                     <span class="nv">exportFormat</span><span class="p">:</span> <span class="kt"><a href="../Classes/AKAudioFile/ExportFormat.html">ExportFormat</a></span><span class="p">,</span>
+                                     <span class="nv">fromSample</span><span class="p">:</span> <span class="kt">Int64</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                                     <span class="nv">toSample</span><span class="p">:</span> <span class="kt">Int64</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+                                     <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>name</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the name of the exported file without its extension (String).</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseDir</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>where the file will be located, can be set to .Resources,  .Documents or .Temp</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ExportFormat</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the output file format as an ExportFormat enum value (.aif, .wav, .m4a, .mp4, .caf)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fromSample</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>start range in samples</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>toSample</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>end range time in samples</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>AsyncProcessCallback function that will be triggered when export completed.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

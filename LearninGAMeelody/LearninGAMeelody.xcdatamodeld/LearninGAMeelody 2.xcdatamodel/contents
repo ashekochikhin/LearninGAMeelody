@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="GenRepresentation" representedClassName="GenRepresentation" syncable="YES" codeGenerationType="class">
+        <attribute name="melodyRule" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="modeRule" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="rhythmicRule" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="naturalLanguageDescription" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NaturalLanguageDescription" inverseName="genRepresentation" inverseEntity="NaturalLanguageDescription" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="melodyRule"/>
+                <index value="modeRule"/>
+                <index value="rhythmicRule"/>
+            </compoundIndex>
+        </compoundIndexes>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="melodyRule"/>
+                <constraint value="modeRule"/>
+                <constraint value="rhythmicRule"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <entity name="NaturalLanguageDescription" representedClassName="NaturalLanguageDescription" syncable="YES" codeGenerationType="class">
+        <attribute name="melody" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mood" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="rhythm" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="genRepresentation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="GenRepresentation" inverseName="naturalLanguageDescription" inverseEntity="GenRepresentation" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="melody"/>
+                <index value="mood"/>
+                <index value="rhythm"/>
+            </compoundIndex>
+        </compoundIndexes>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="melody"/>
+                <constraint value="mood"/>
+                <constraint value="rhythm"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
+    </entity>
+    <elements>
+        <element name="GenRepresentation" positionX="-227" positionY="18" width="173" height="105"/>
+        <element name="NaturalLanguageDescription" positionX="63" positionY="-27" width="128" height="105"/>
+    </elements>
+</model>

@@ -1,0 +1,3959 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AKOperation Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/AKOperation" class="dashAnchor"></a>
+    <a title="AKOperation Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">AudioKit Docs</a> (94% documented)</p>
+        <p class="header-right"><a href="https://github.com/audiokit/AudioKit"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">AudioKit Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        AKOperation Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../AudioKit Core.html">AudioKit Core</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AudioKit.html">AudioKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAudioFile.html">AKAudioFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAudioFile/BaseDirectory.html">– BaseDirectory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKAudioFile/ExportFormat.html">– ExportFormat</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDevice.html">AKDevice</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNodeRecorder.html">AKNodeRecorder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSettings.html">AKSettings</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSettings/SessionCategory.html">– SessionCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSettings/BufferLength.html">– BufferLength</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKTable.html">AKTable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKTableType.html">AKTableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTester.html">AKTester</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../MIDI.html">MIDI</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDI.html">AKMIDI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKMIDIEvent.html">AKMIDIEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKMIDIControl.html">AKMIDIControl</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDIInstrument.html">AKMIDIInstrument</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKMIDIListener.html">AKMIDIListener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDINode.html">AKMIDINode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMIDISampler.html">AKMIDISampler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKMIDIStatus.html">AKMIDIStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AKMIDISystemCommand.html">AKMIDISystemCommand</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MIDIPacket.html">MIDIPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/MIDIPacketList.html">MIDIPacketList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/MIDIPacketListGenerator.html">MIDIPacketListGenerator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKCallbackInstrument.html">AKCallbackInstrument</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Sequencer.html">Sequencer</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKSequencer.html">AKSequencer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AKDuration.html">AKDuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMusicTrack.html">AKMusicTrack</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Nodes.html">Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKNode.html">AKNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKPolyphonic.html">AKPolyphonic</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPolyphonicNode.html">AKPolyphonicNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKToggleable.html">AKToggleable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKOperationGenerator.html">AKOperationGenerator</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Analysis Nodes.html">Analysis Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAmplitudeTracker.html">AKAmplitudeTracker</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFrequencyTracker.html">AKFrequencyTracker</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Delay Nodes.html">Delay Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKDelay.html">AKDelay</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVariableDelay.html">AKVariableDelay</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Distortion Nodes.html">Distortion Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKBitCrusher.html">AKBitCrusher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKClipper.html">AKClipper</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDecimator.html">AKDecimator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDistortion.html">AKDistortion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKRingModulator.html">AKRingModulator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTanhDistortion.html">AKTanhDistortion</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Dynamics Nodes.html">Dynamics Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKCompressor.html">AKCompressor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDynamicsProcessor.html">AKDynamicsProcessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKExpander.html">AKExpander</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPeakLimiter.html">AKPeakLimiter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Effects Nodes.html">Effects Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKOperationEffect.html">AKOperationEffect</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPitchShifter.html">AKPitchShifter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Envelopes.html">Envelopes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAmplitudeEnvelope.html">AKAmplitudeEnvelope</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTremolo.html">AKTremolo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Filter Nodes.html">Filter Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAutoWah.html">AKAutoWah</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBandPassButterworthFilter.html">AKBandPassButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBandPassFilter.html">AKBandPassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBandRejectButterworthFilter.html">AKBandRejectButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKCombFilterReverb.html">AKCombFilterReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDCBlock.html">AKDCBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKEqualizerFilter.html">AKEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFormantFilter.html">AKFormantFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKHighPassButterworthFilter.html">AKHighPassButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKHighPassFilter.html">AKHighPassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKHighShelfFilter.html">AKHighShelfFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKHighShelfParametricEqualizerFilter.html">AKHighShelfParametricEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKKorgLowPassFilter.html">AKKorgLowPassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKLowPassButterworthFilter.html">AKLowPassButterworthFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKLowPassFilter.html">AKLowPassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKLowShelfFilter.html">AKLowShelfFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKLowShelfParametricEqualizerFilter.html">AKLowShelfParametricEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKModalResonanceFilter.html">AKModalResonanceFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMoogLadder.html">AKMoogLadder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKParametricEQ.html">AKParametricEQ</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPeakingParametricEqualizerFilter.html">AKPeakingParametricEqualizerFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKResonantFilter.html">AKResonantFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKRolandTB303Filter.html">AKRolandTB303Filter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStringResonator.html">AKStringResonator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKThreePoleLowpassFilter.html">AKThreePoleLowpassFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKToneFilter.html">AKToneFilter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKToneComplementFilter.html">AKToneComplementFilter</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Reverb Nodes.html">Reverb Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKChowningReverb.html">AKChowningReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKCostelloReverb.html">AKCostelloReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKConvolution.html">AKConvolution</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFlatFrequencyResponseReverb.html">AKFlatFrequencyResponseReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKReverb.html">AKReverb</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKReverb2.html">AKReverb2</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Noise Generator Nodes.html">Noise Generator Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKPinkNoise.html">AKPinkNoise</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKWhiteNoise.html">AKWhiteNoise</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Oscillator Nodes.html">Oscillator Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKFMOscillator.html">AKFMOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFMOscillatorBank.html">AKFMOscillatorBank</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMorphingOscillator.html">AKMorphingOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMorphingOscillatorBank.html">AKMorphingOscillatorBank</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKOscillator.html">AKOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKOscillatorBank.html">AKOscillatorBank</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPhaseDistortionOscillator.html">AKPhaseDistortionOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPhaseDistortionOscillatorBank.html">AKPhaseDistortionOscillatorBank</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPWMOscillator.html">AKPWMOscillator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPWMOscillatorBank.html">AKPWMOscillatorBank</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Physical Models.html">Physical Models</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKClarinet.html">AKClarinet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDrip.html">AKDrip</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFlute.html">AKFlute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMandolin.html">AKMandolin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMetalBar.html">AKMetalBar</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPluckedString.html">AKPluckedString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSynthKick.html">AKSynthKick</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSynthSnare.html">AKSynthSnare</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Input Node.html">Input Node</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKMicrophone.html">AKMicrophone</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoInput.html">AKStereoInput</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Mixing Nodes.html">Mixing Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AK3DPanner.html">AK3DPanner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBalancer.html">AKBalancer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBooster.html">AKBooster</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKDryWetMixer.html">AKDryWetMixer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKMixer.html">AKMixer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPanner.html">AKPanner</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Playback Nodes.html">Playback Nodes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAudioPlayer.html">AKAudioPlayer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPhaseLockedVocoder.html">AKPhaseLockedVocoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKSampler.html">AKSampler</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTimePitch.html">AKTimePitch</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKVariSpeed.html">AKVariSpeed</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Operations.html">Operations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AKParameter.html">AKParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKComputedParameter.html">AKComputedParameter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKOperation.html">AKOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKStereoOperation.html">AKStereoOperation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Numeric.html">Numeric</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Math.html">Math</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3absFCS_11AKOperationS0_">abs(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit4ceilFVS_10AKDurationS0_">ceil(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit5floorFCS_11AKOperationS0_">floor(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit5fractFCS_11AKOperationS0_">fract(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3logFCS_11AKOperationS0_">log(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit5log10FCS_11AKOperationS0_">log10(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3maxFTPS_19AKComputedParameter_PS0___CS_11AKOperation">max(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3maxFTPS_19AKComputedParameter_PS_11AKParameter__CS_11AKOperation">max(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3maxFTPS_11AKParameter_PS_19AKComputedParameter__CS_11AKOperation">max(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3minFTPS_19AKComputedParameter_PS0___CS_11AKOperation">min(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3minFTPS_19AKComputedParameter_PS_11AKParameter__CS_11AKOperation">min(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit3minFTPS_11AKParameter_PS_19AKComputedParameter__CS_11AKOperation">min(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit5mixerFTPS_11AKParameter_PS0__7balancePS0___CS_11AKOperation">mixer(_:_:balance:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKit5roundFCS_11AKOperationS0_">round(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1mFTPS_11AKParameter_PS0___CS_11AKOperation">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1mFTCS_17AKStereoOperationPS_11AKParameter__S0_">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1mFTPS_11AKParameter_CS_17AKStereoOperation_S1_">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1mFTPS_7Numeric_PS0___Sd">*(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1pFTVS_10AKDurationS0__S0_">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1pFTPS_7Numeric_PS0___Sd">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1pFTPS_11AKParameter_PS0___CS_11AKOperation">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1pFTCS_17AKStereoOperationS0__S0_">+(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1sFTPS_11AKParameter_PS0___CS_11AKOperation">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1sFTCS_17AKStereoOperationS0__S0_">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1sFTVS_10AKDurationS0__S0_">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1sFTPS_7Numeric_PS0___Sd">-(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1dFTPS_7Numeric_PS0___Sd">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1dFTPS_11AKParameter_PS0___CS_11AKOperation">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1dFTCS_17AKStereoOperationPS_11AKParameter__S0_">/(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi2eeFTVS_10AKDurationS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi2neFTVS_10AKDurationS0__Sb">!=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1lFTVS_10AKDurationS0__Sb">&lt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi2leFTVS_10AKDurationS0__Sb">&lt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1gFTVS_10AKDurationS0__Sb">&gt;(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi2geFTVS_10AKDurationS0__Sb">&gt;=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi1rFTVS_10AKDurationS0__S0_">%(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi2peFTRVS_10AKDurationS0__T_">+=(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Math.html#/s:F8AudioKitoi2seFTRVS_10AKDurationS0__T_">-=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Random Number Generators.html">Random Number Generators</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Random Number Generators.html#/s:F8AudioKit6randomFTSdSd_Sd">random(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Plotting Tools.html">Plotting Tools</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKRollingOutputPlot.html">AKRollingOutputPlot</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNodeFFTPlot.html">AKNodeFFTPlot</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNodeOutputPlot.html">AKNodeOutputPlot</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKOutputWaveformPlot.html">AKOutputWaveformPlot</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Taps.html">Taps</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAmplitudeTap.html">AKAmplitudeTap</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKFFTTap.html">AKFFTTap</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../UI Elements.html">UI Elements</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKADSRView.html">AKADSRView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKButton.html">AKButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKBypassButton.html">AKBypassButton</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKKeyboardView.html">AKKeyboardView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AKKeyboardDelegate.html">AKKeyboardDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKNotifications.html">AKNotifications</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPlaygroundLoop.html">AKPlaygroundLoop</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPlaygroundView.html">AKPlaygroundView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPresetLoaderView.html">AKPresetLoaderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKPropertySlider.html">AKPropertySlider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKResourcesAudioFileLoaderView.html">AKResourcesAudioFileLoaderView</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AKTelephoneView.html">AKTelephoneView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Classes.html">Other Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AKAUPresetBuilder.html">AKAUPresetBuilder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Global Variables.html">Other Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Global Variables.html#/s:v8AudioKit22filtersPlaygroundFilesGSaSS_">filtersPlaygroundFiles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Global Variables.html#/s:v8AudioKit23playbackPlaygroundFilesGSaSS_">playbackPlaygroundFiles</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Global Variables.html#/s:v8AudioKit25processingPlaygroundFilesGSaSS_">processingPlaygroundFiles</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Enums.html">Other Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/SampleTriggerMode.html">SampleTriggerMode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/AVAudioEngine.html">AVAudioEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/AudioUnit.html">AudioUnit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ClosedRange.html">ClosedRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Collection.html">Collection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Float.html">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/OSStatus.html">OSStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RangeReplaceableCollection.html">RangeReplaceableCollection</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Functions.html">Other Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:F8AudioKitop1sFCS_17AKStereoOperationS0_">-(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:F8AudioKitop1sFPS_11AKParameter_CS_11AKOperation">-(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:F8AudioKit10CheckErrorFVs5Int32T_">CheckError(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Functions.html#/s:F8AudioKit6fourCCFSSVs6UInt32">fourCC(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Structs.html">Other Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/AudioUnitPropertyListener.html">AudioUnitPropertyListener</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Typealiases.html">Other Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit14AKMIDICallback">AKMIDICallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:8AudioKit15AKRawMIDIPacket">AKRawMIDIPacket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:C8AudioKit11AKAudioFile20AsyncProcessCallback">AsyncProcessCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Other Typealiases.html#/s:E8AudioKitVSC14MIDIPacketList8Iterator">Iterator</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>AKOperation</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">AKOperation</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKComputedParameter.html">AKComputedParameter</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>An AKOperation is a computed parameter that can be passed to other operations in the same operation node</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/String%20Representations"></a>
+                <a name="//apple_ref/swift/Section/String Representations" class="dashAnchor"></a>
+                <a href="#/String%20Representations">
+                  <h3 class="section-name">String Representations</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC8AudioKit11AKOperation11descriptionSS"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC8AudioKit11AKOperation11descriptionSS">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Redefining description to return the operation string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Inputs"></a>
+                <a name="//apple_ref/swift/Section/Inputs" class="dashAnchor"></a>
+                <a href="#/Inputs">
+                  <h3 class="section-name">Inputs</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC8AudioKit11AKOperation9leftInputS0_"></a>
+                    <a name="//apple_ref/swift/Variable/leftInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC8AudioKit11AKOperation9leftInputS0_">leftInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Left input to any stereo operation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">leftInput</span> <span class="o">=</span> <span class="kt">AKOperation</span><span class="p">(</span><span class="s">"(14 p) "</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC8AudioKit11AKOperation10rightInputS0_"></a>
+                    <a name="//apple_ref/swift/Variable/rightInput" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC8AudioKit11AKOperation10rightInputS0_">rightInput</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Right input to any stereo operation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">rightInput</span> <span class="o">=</span> <span class="kt">AKOperation</span><span class="p">(</span><span class="s">"(15 p) "</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC8AudioKit11AKOperation7triggerS0_"></a>
+                    <a name="//apple_ref/swift/Variable/trigger" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC8AudioKit11AKOperation7triggerS0_">trigger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Dummy trigger</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">trigger</span> <span class="o">=</span> <span class="kt">AKOperation</span><span class="p">(</span><span class="s">"(0 p) "</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Functions"></a>
+                <a name="//apple_ref/swift/Section/Functions" class="dashAnchor"></a>
+                <a href="#/Functions">
+                  <h3 class="section-name">Functions</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC8AudioKit11AKOperation10parametersGSaS0__"></a>
+                    <a name="//apple_ref/swift/Variable/parameters" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC8AudioKit11AKOperation10parametersGSaS0__">parameters</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An= array of 14 parameters which may be sent to operations</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">AKOperation</span><span class="p">]</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation6toMonoFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/toMono()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation6toMonoFT_S0_">toMono()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convert the operation to a mono operation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">toMono</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation3absFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/abs()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation3absFT_S0_">abs()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs absolute value on the operation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">abs</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation5floorFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/floor()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation5floorFT_S0_">floor()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs floor calculation on the operation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">floor</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation5fractFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/fract()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation5fractFT_S0_">fract()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the fractional part of the operation (as opposed to the integer part)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">fract</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation3logFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/log()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation3logFT_S0_">log()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs natural logarithm on the operation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">log</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation5log10FT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/log10()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation5log10FT_S0_">log10()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Performs Base 10 logarithm on the operation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">log10</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation5roundFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/round()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation5roundFT_S0_">round()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Rounds the operation to the nearest integer</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">round</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation19midiNoteToFrequencyFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/midiNoteToFrequency()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation19midiNoteToFrequencyFT_S0_">midiNoteToFrequency()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a frequency for a given midi note number</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">midiNoteToFrequency</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Initialization"></a>
+                <a name="//apple_ref/swift/Section/Initialization" class="dashAnchor"></a>
+                <a href="#/Initialization">
+                  <h3 class="section-name">Initialization</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperationcFSdS0_"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperationcFSdS0_">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize the operation as a constant value</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>value</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Constant value as an operation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperationcFSSS0_"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperationcFSSS0_">init(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize the operation with a Sporth string</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">operationString</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>operationString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Valid Sporth string (proceed with caution</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperationcFt6moduleSS5setupSS6inputsGSaPS_11AKParameter___S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(module:setup:inputs:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperationcFt6moduleSS5setupSS6inputsGSaPS_11AKParameter___S0_">init(module:setup:inputs:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initialize the operation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">module</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">setup</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="p">,</span>  <span class="nv">inputs</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span><span class="o">...</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>module</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Sporth unit generator</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>setup</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Any setup Sporth code that this operation may require</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inputs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>All the parameters of the operation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation8sineWaveFT9frequencyPS_11AKParameter_9amplitudePS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/sineWave(frequency:amplitude:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation8sineWaveFT9frequencyPS_11AKParameter_9amplitudePS1___S0_">sineWave(frequency:amplitude:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Standard Sine Wave</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>frequency: Frequency in cycles per second (Default: 440)</li>
+<li>amplitude: Amplitude of the output (Default: 1)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sineWave</span><span class="p">(</span>
+        <span class="nv">frequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">440</span><span class="p">,</span>
+        <span class="nv">amplitude</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Frequency in cycles per second (Default: 440)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amplitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Amplitude of the output (Default: 1)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation5minusFPS_11AKParameter_S0_"></a>
+                    <a name="//apple_ref/swift/Method/minus(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation5minusFPS_11AKParameter_S0_">minus(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Subtraction of parameters</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">minus</span><span class="p">(</span><span class="n">_</span> <span class="nv">subtrahend</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subtrahend</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The amount to subtract</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation10portamentoFT12halfDurationPS_11AKParameter__S0_"></a>
+                    <a name="//apple_ref/swift/Method/portamento(halfDuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation10portamentoFT12halfDurationPS_11AKParameter__S0_">portamento(halfDuration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Portamento-style control signal smoothing
+Useful for smoothing out low-resolution signals and applying glissando to
+filters.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>input: Input audio signal</li>
+<li>halfDuration: Duration which the curve will traverse half the distance towards the new value, then half as much again, etc., theoretically never reaching its asymptote. (Default: 0.02, Minimum: , Maximum: )</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">portamento</span><span class="p">(</span><span class="nv">halfDuration</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.02</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>input</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Input audio signal</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>halfDuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Duration which the curve will traverse half the distance towards the new value, then half as much again, etc., theoretically never reaching its asymptote. (Default: 0.02, Minimum: , Maximum: )</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation9metronomeFT9frequencyPS_11AKParameter__S0_"></a>
+                    <a name="//apple_ref/swift/Method/metronome(frequency:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation9metronomeFT9frequencyPS_11AKParameter__S0_">metronome(frequency:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Metro produces a series of 1-sample ticks at a regular rate. Typically, this
+is used alongside trigger-driven modules.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">metronome</span><span class="p">(</span><span class="nv">frequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">2.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The frequency to repeat. (Default: 2.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation21triggeredWithEnvelopeFT7triggerPS_11AKParameter_6attackPS1__4holdPS1__7releasePS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/triggeredWithEnvelope(trigger:attack:hold:release:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation21triggeredWithEnvelopeFT7triggerPS_11AKParameter_6attackPS1__4holdPS1__7releasePS1___S0_">triggeredWithEnvelope(trigger:attack:hold:release:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Trigger based linear AHD envelope generator</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>trigger: A triggering operation such as a metronome</li>
+<li>attack: Attack time, in seconds. (Default: 0.1)</li>
+<li>hold: Hold time, in seconds. (Default: 0.3)</li>
+<li>release: Release time, in seconds. (Default: 0.2)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">triggeredWithEnvelope</span><span class="p">(</span>
+        <span class="nv">trigger</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span><span class="p">,</span>
+        <span class="nv">attack</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="nv">hold</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.3</span><span class="p">,</span>
+        <span class="nv">release</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.2</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>trigger</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A triggering operation such as a metronome</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attack</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Attack time, in seconds. (Default: 0.1)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hold</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Hold time, in seconds. (Default: 0.3)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>release</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Release time, in seconds. (Default: 0.2)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation17gatedADSREnvelopeFT4gatePS_11AKParameter_6attackPS1__5decayPS1__7sustainPS1__7releasePS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/gatedADSREnvelope(gate:attack:decay:sustain:release:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation17gatedADSREnvelopeFT4gatePS_11AKParameter_6attackPS1__5decayPS1__7sustainPS1__7releasePS1___S0_">gatedADSREnvelope(gate:attack:decay:sustain:release:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gate based linear AHD envelope generator</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>gate: 1 for on and 0 for off</li>
+<li>attack: Attack time, in seconds. (Default: 0.1)</li>
+<li>hold: Hold time, in seconds. (Default: 0.3)</li>
+<li>release: Release time, in seconds. (Default: 0.2)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">gatedADSREnvelope</span><span class="p">(</span>
+        <span class="nv">gate</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span><span class="p">,</span>
+        <span class="nv">attack</span><span class="p">:</span>  <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
+        <span class="nv">decay</span><span class="p">:</span>   <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span>
+        <span class="nv">sustain</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nv">release</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.2</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>gate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>1 for on and 0 for off</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>attack</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Attack time, in seconds. (Default: 0.1)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hold</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Hold time, in seconds. (Default: 0.3)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>release</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Release time, in seconds. (Default: 0.2)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation17randomNumberPulseFT7minimumPS_11AKParameter_7maximumPS1__15updateFrequencyPS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/randomNumberPulse(minimum:maximum:updateFrequency:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation17randomNumberPulseFT7minimumPS_11AKParameter_7maximumPS1__15updateFrequencyPS1___S0_">randomNumberPulse(minimum:maximum:updateFrequency:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Loosely based off of the Csound opcode randomh. The design is equivalent to
+scaled noise sent through a classic sample and hold module.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>minimum: Minimum value to use. (Default: 0)</li>
+<li>maximum: Maximum value to use. (Default: 1)</li>
+<li>updateFrequency: Frequency of randomization (in Hz) (Default: 10)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">randomNumberPulse</span><span class="p">(</span>
+        <span class="nv">minimum</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nv">maximum</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nv">updateFrequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">10</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>minimum</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Minimum value to use. (Default: 0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maximum</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Maximum value to use. (Default: 1)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>updateFrequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Frequency of randomization (in Hz) (Default: 10)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation5timesFPS_11AKParameter_S0_"></a>
+                    <a name="//apple_ref/swift/Method/times(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation5timesFPS_11AKParameter_S0_">times(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Multiplication of parameters</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">times</span><span class="p">(</span><span class="n">_</span> <span class="nv">parameter</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The amount to multiply</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation8scaledByFPS_11AKParameter_S0_"></a>
+                    <a name="//apple_ref/swift/Method/scaledBy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation8scaledByFPS_11AKParameter_S0_">scaledBy(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Offsetting by way of multiplication</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">scaledBy</span><span class="p">(</span><span class="n">_</span> <span class="nv">parameter</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The amount to scale by</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation10whiteNoiseFT9amplitudePS_11AKParameter__S0_"></a>
+                    <a name="//apple_ref/swift/Method/whiteNoise(amplitude:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation10whiteNoiseFT9amplitudePS_11AKParameter__S0_">whiteNoise(amplitude:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>White noise generator</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">whiteNoise</span><span class="p">(</span>
+        <span class="nv">amplitude</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amplitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Amplitude. (Value between 0-1). (Default: 1.0, Minimum: 0.0, Maximum: 10.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation12fmOscillatorFT13baseFrequencyPS_11AKParameter_17carrierMultiplierPS1__20modulatingMultiplierPS1__15modulationIndexPS1__9amplitudePS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/fmOscillator(baseFrequency:carrierMultiplier:modulatingMultiplier:modulationIndex:amplitude:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation12fmOscillatorFT13baseFrequencyPS_11AKParameter_17carrierMultiplierPS1__20modulatingMultiplierPS1__15modulationIndexPS1__9amplitudePS1___S0_">fmOscillator(baseFrequency:carrierMultiplier:modulatingMultiplier:modulationIndex:amplitude:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Classic FM Synthesis audio generation.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>baseFrequency: In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies. (Default: 440, Minimum: 0.0, Maximum: 20000.0)</li>
+<li>carrierMultiplier: This multiplied by the baseFrequency gives the carrier frequency. (Default: 1.0, Minimum: 0.0, Maximum: 1000.0)</li>
+<li>modulatingMultiplier: This multiplied by the baseFrequency gives the modulating frequency. (Default: 1.0, Minimum: 0.0, Maximum: 1000.0)</li>
+<li>modulationIndex: This multiplied by the modulating frequency gives the modulation amplitude. (Default: 1.0, Minimum: 0.0, Maximum: 1000.0)</li>
+<li>amplitude: Output Amplitude. (Default: 0.5, Minimum: 0.0, Maximum: 10.0)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">fmOscillator</span><span class="p">(</span>
+        <span class="nv">baseFrequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">440</span><span class="p">,</span>
+        <span class="nv">carrierMultiplier</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="nv">modulatingMultiplier</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="nv">modulationIndex</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="nv">amplitude</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.5</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>baseFrequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>In cycles per second, or Hz, this is the common denominator for the carrier and modulating frequencies. (Default: 440, Minimum: 0.0, Maximum: 20000.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>carrierMultiplier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>This multiplied by the baseFrequency gives the carrier frequency. (Default: 1.0, Minimum: 0.0, Maximum: 1000.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>modulatingMultiplier</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>This multiplied by the baseFrequency gives the modulating frequency. (Default: 1.0, Minimum: 0.0, Maximum: 1000.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>modulationIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>This multiplied by the modulating frequency gives the modulation amplitude. (Default: 1.0, Minimum: 0.0, Maximum: 1000.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amplitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Output Amplitude. (Default: 0.5, Minimum: 0.0, Maximum: 10.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation5countFT7maximumPS_11AKParameter_7loopingSb_S0_"></a>
+                    <a name="//apple_ref/swift/Method/count(maximum:looping:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation5countFT7maximumPS_11AKParameter_7loopingSb_S0_">count(maximum:looping:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Keep track of the number of times a trigger has fired</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>maximum: Largest value to hold before looping or being pinned to this value</li>
+<li>looping: If set to true, when the maximum is reaching, the count goes back to zero, otherwise it stays at the maximum</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">count</span><span class="p">(</span><span class="nv">maximum</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">1000000</span><span class="p">,</span> <span class="nv">looping</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maximum</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Largest value to hold before looping or being pinned to this value</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>looping</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If set to true, when the maximum is reaching, the count goes back to zero, otherwise it stays at the maximum</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation10squareWaveFT9frequencyPS_11AKParameter_9amplitudePS1__10pulseWidthPS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/squareWave(frequency:amplitude:pulseWidth:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation10squareWaveFT9frequencyPS_11AKParameter_9amplitudePS1__10pulseWidthPS1___S0_">squareWave(frequency:amplitude:pulseWidth:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is a bandlimited square oscillator ported from the <q>square</q> function
+from the Faust programming language.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>frequency: In cycles per second, or Hz. (Default: 440, Minimum: 0, Maximum: 20000)</li>
+<li>amplitude: Output amplitude (Default: 1.0, Minimum: 0, Maximum: 10)</li>
+<li>pulseWidth: Duty cycle width (range 0-1). (Default: 0.5, Minimum: 0, Maximum: 1)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">squareWave</span><span class="p">(</span>
+        <span class="nv">frequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">440</span><span class="p">,</span>
+        <span class="nv">amplitude</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span>
+        <span class="nv">pulseWidth</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.5</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>In cycles per second, or Hz. (Default: 440, Minimum: 0, Maximum: 20000)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amplitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Output amplitude (Default: 1.0, Minimum: 0, Maximum: 10)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pulseWidth</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Duty cycle width (range 0-1). (Default: 0.5, Minimum: 0, Maximum: 1)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation9incrementFT2onPS_11AKParameter_2byPS1__7minimumPS1__7maximumPS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/increment(on:by:minimum:maximum:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation9incrementFT2onPS_11AKParameter_2byPS1__7minimumPS1__7maximumPS1___S0_">increment(on:by:minimum:maximum:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Increment a signal by a default value of 1</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>on: When to increment</li>
+<li>by: Increment amount (Default: 1)</li>
+<li>minimum: Increment amount (Default: 1)</li>
+<li>maximum: Increment amount (Default: 1)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">increment</span><span class="p">(</span><span class="n">on</span> <span class="nv">trigger</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span><span class="p">,</span> <span class="n">by</span> <span class="nv">step</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">,</span> <span class="nv">minimum</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.0</span><span class="p">,</span> <span class="nv">maximum</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">1000000</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>on</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>When to increment</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>by</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Increment amount (Default: 1)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>minimum</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Increment amount (Default: 1)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maximum</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Increment amount (Default: 1)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation4saveFT14parameterIndexSi_S0_"></a>
+                    <a name="//apple_ref/swift/Method/save(parameterIndex:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation4saveFT14parameterIndexSi_S0_">save(parameterIndex:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Save a value into the parameters array for using outside of the operation</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">save</span><span class="p">(</span><span class="nv">parameterIndex</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameterIndex</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Location in the parameters array to save this value</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation6jitterFT9amplitudePS_11AKParameter_16minimumFrequencyPS1__16maximumFrequencyPS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/jitter(amplitude:minimumFrequency:maximumFrequency:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation6jitterFT9amplitudePS_11AKParameter_16minimumFrequencyPS1__16maximumFrequencyPS1___S0_">jitter(amplitude:minimumFrequency:maximumFrequency:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A signal with random fluctuations
+This is useful for emulating jitter found in analogue equipment.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>amplitude: The amplitude of the line. Will produce values in the range of (+/-)amp. (Default: 0.5)</li>
+<li>minimumFrequency: The minimum frequency of change in Hz. (Default: 0.5)</li>
+<li>maximumFrequency: The maximum frequency of change in Hz. (Default: 4)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">jitter</span><span class="p">(</span>
+        <span class="nv">amplitude</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="nv">minimumFrequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="nv">maximumFrequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">4</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amplitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The amplitude of the line. Will produce values in the range of (+/-)amp. (Default: 0.5)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>minimumFrequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The minimum frequency of change in Hz. (Default: 0.5)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maximumFrequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The maximum frequency of change in Hz. (Default: 4)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation6phasorFT9frequencyPS_11AKParameter_5phaseSd_S0_"></a>
+                    <a name="//apple_ref/swift/Method/phasor(frequency:phase:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation6phasorFT9frequencyPS_11AKParameter_5phaseSd_S0_">phasor(frequency:phase:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Produces a normalized sawtooth wave between the values of 0 and 1. Phasors
+are often used when building table-lookup oscillators.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>frequency: Frequency in cycles per second, or Hz. (Default: 1.0, Minimum: 0.0, Maximum: 1000.0)</li>
+<li>phase: Initial phase (Default: 0)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">phasor</span><span class="p">(</span>
+        <span class="nv">frequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nv">phase</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Frequency in cycles per second, or Hz. (Default: 1.0, Minimum: 0.0, Maximum: 1000.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>phase</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Initial phase (Default: 0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation13pluckedStringFT7triggerS0_9frequencyPS_11AKParameter_9amplitudePS1__15lowestFrequencySd_S0_"></a>
+                    <a name="//apple_ref/swift/Method/pluckedString(trigger:frequency:amplitude:lowestFrequency:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation13pluckedStringFT7triggerS0_9frequencyPS_11AKParameter_9amplitudePS1__15lowestFrequencySd_S0_">pluckedString(trigger:frequency:amplitude:lowestFrequency:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Karplus-Strong plucked string instrument.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>trigger: Triggering operation</li>
+<li>frequency: Variable frequency. Values less than the lowest frequency will be doubled until it is greater than that. (Default: 110, Minimum: 0, Maximum: 22000)</li>
+<li>amplitude: Amplitude (Default: 0.5, Minimum: 0, Maximum: 1)</li>
+<li>lowestFrequency: Sets the initial frequency. This frequency is used to allocate all the buffers needed for the delay. This should be the lowest frequency you plan on using. (Default: 110)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">pluckedString</span><span class="p">(</span>
+        <span class="nv">trigger</span><span class="p">:</span> <span class="kt">AKOperation</span><span class="p">,</span>
+        <span class="nv">frequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">110</span><span class="p">,</span>
+        <span class="nv">amplitude</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="nv">lowestFrequency</span><span class="p">:</span> <span class="kt">Double</span> <span class="o">=</span> <span class="mi">110</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>trigger</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Triggering operation</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Variable frequency. Values less than the lowest frequency will be doubled until it is greater than that. (Default: 110, Minimum: 0, Maximum: 22000)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amplitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Amplitude (Default: 0.5, Minimum: 0, Maximum: 1)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lowestFrequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Sets the initial frequency. This frequency is used to allocate all the buffers needed for the delay. This should be the lowest frequency you plan on using. (Default: 110)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation4plusFPS_11AKParameter_S0_"></a>
+                    <a name="//apple_ref/swift/Method/plus(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation4plusFPS_11AKParameter_S0_">plus(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Addition/Summation of operations</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">plus</span><span class="p">(</span><span class="n">_</span> <span class="nv">parameter</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The amount to add</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation8offsetByFPS_11AKParameter_S0_"></a>
+                    <a name="//apple_ref/swift/Method/offsetBy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation8offsetByFPS_11AKParameter_S0_">offsetBy(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Offsetting by way of addition</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">offsetBy</span><span class="p">(</span><span class="n">_</span> <span class="nv">parameter</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The amount to offset by</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation18morphingOscillatorFT9frequencyPS_11AKParameter_9amplitudePS1__5indexPS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/morphingOscillator(frequency:amplitude:index:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation18morphingOscillatorFT9frequencyPS_11AKParameter_9amplitudePS1__5indexPS1___S0_">morphingOscillator(frequency:amplitude:index:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Morphing Oscillator </p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>frequency: Frequency in cycles per second (Default: 440)</li>
+<li>amplitude: Amplitude of the output (Default: 1)</li>
+<li>index: Index of waveform 0.0 - 3.0 where 0 = sine, 1 = square, 2 = sawtooth, 3 = reversed sawtooth</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">morphingOscillator</span><span class="p">(</span>
+        <span class="nv">frequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">440</span><span class="p">,</span>
+        <span class="nv">amplitude</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nv">index</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Frequency in cycles per second (Default: 440)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amplitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Amplitude of the output (Default: 1)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>index</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Index of waveform 0.0 - 3.0 where 0 = sine, 1 = square, 2 = sawtooth, 3 = reversed sawtooth</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation5scaleFT7minimumPS_11AKParameter_7maximumPS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/scale(minimum:maximum:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation5scaleFT7minimumPS_11AKParameter_7maximumPS1___S0_">scale(minimum:maximum:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This scales from -1 to 1 to a range defined by a minimum and maximum point in the input and output domain.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>minimum: Minimum value to scale to. (Default: 0)</li>
+<li>maximum: Maximum value to scale to. (Default: 1)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">scale</span><span class="p">(</span>
+        <span class="nv">minimum</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nv">maximum</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>minimum</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Minimum value to scale to. (Default: 0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maximum</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Maximum value to scale to. (Default: 1)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation9pinkNoiseFT9amplitudePS_11AKParameter__S0_"></a>
+                    <a name="//apple_ref/swift/Method/pinkNoise(amplitude:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation9pinkNoiseFT9amplitudePS_11AKParameter__S0_">pinkNoise(amplitude:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Faust-based pink noise generator</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">pinkNoise</span><span class="p">(</span>
+        <span class="nv">amplitude</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">1.0</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amplitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Amplitude. (Value between 0-1). (Default: 1.0, Minimum: 0, Maximum: 1.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC8AudioKit11AKOperation9dividedByFPS_11AKParameter_S0_"></a>
+                    <a name="//apple_ref/swift/Method/dividedBy(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC8AudioKit11AKOperation9dividedByFPS_11AKParameter_S0_">dividedBy(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Division of parameters</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">dividedBy</span><span class="p">(</span><span class="n">_</span> <span class="nv">denominator</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>denominator</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The amount to divide</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation6squareFT9frequencyPS_11AKParameter_9amplitudePS1__5phasePS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/square(frequency:amplitude:phase:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation6squareFT9frequencyPS_11AKParameter_9amplitudePS1__5phasePS1___S0_">square(frequency:amplitude:phase:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Simple square oscillator, not-band limited, can be used for LFO or wave,
+but squareWave is probably better for audio.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>frequency: In cycles per second, or Hz. (Default: 440, Minimum: 0.0, Maximum: 20000.0)</li>
+<li>amplitude: Output Amplitude. (Default: 0.5, Minimum: 0.0, Maximum: 1.0)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">square</span><span class="p">(</span>
+        <span class="nv">frequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">440</span><span class="p">,</span>
+        <span class="nv">amplitude</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="nv">phase</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>In cycles per second, or Hz. (Default: 440, Minimum: 0.0, Maximum: 20000.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amplitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Output Amplitude. (Default: 0.5, Minimum: 0.0, Maximum: 1.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation15periodicTriggerFT6periodPS_11AKParameter__S0_"></a>
+                    <a name="//apple_ref/swift/Method/periodicTrigger(period:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation15periodicTriggerFT6periodPS_11AKParameter__S0_">periodicTrigger(period:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Produce a set of triggers spaced apart by time.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">periodicTrigger</span><span class="p">(</span><span class="nv">period</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>period</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Time between triggers (in seconds). This will update at the start of each trigger. (Default: 1.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation12sawtoothWaveFT9frequencyPS_11AKParameter_9amplitudePS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/sawtoothWave(frequency:amplitude:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation12sawtoothWaveFT9frequencyPS_11AKParameter_9amplitudePS1___S0_">sawtoothWave(frequency:amplitude:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Bandlimited sawtooth oscillator This is a bandlimited sawtooth oscillator
+ported from the <q>sawtooth</q> function from the Faust programming language.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>frequency: In cycles per second, or Hz. (Default: 440, Minimum: 0.0, Maximum: 20000.0)</li>
+<li>amplitude: Output Amplitude. (Default: 0.5, Minimum: 0.0, Maximum: 1.0)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sawtoothWave</span><span class="p">(</span>
+        <span class="nv">frequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">440</span><span class="p">,</span>
+        <span class="nv">amplitude</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.5</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>In cycles per second, or Hz. (Default: 440, Minimum: 0.0, Maximum: 20000.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amplitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Output Amplitude. (Default: 0.5, Minimum: 0.0, Maximum: 1.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation11lineSegmentFT7triggerS0_5startPS_11AKParameter_3endPS1__8durationPS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/lineSegment(trigger:start:end:duration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation11lineSegmentFT7triggerS0_5startPS_11AKParameter_3endPS1__8durationPS1___S0_">lineSegment(trigger:start:end:duration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Line Segment to change values over time</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>start: Starting value</li>
+<li>end: Ending value</li>
+<li>duration: Length of time</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">lineSegment</span><span class="p">(</span>
+        <span class="nv">trigger</span><span class="p">:</span> <span class="kt">AKOperation</span><span class="p">,</span>
+        <span class="nv">start</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span><span class="p">,</span>
+        <span class="nv">end</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span><span class="p">,</span>
+        <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>start</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Starting value</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>end</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Ending value</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Length of time</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation18exponentialSegmentFT7triggerS0_5startPS_11AKParameter_3endPS1__8durationPS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/exponentialSegment(trigger:start:end:duration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation18exponentialSegmentFT7triggerS0_5startPS_11AKParameter_3endPS1__8durationPS1___S0_">exponentialSegment(trigger:start:end:duration:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Exponential Segment to change values over time</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>start: Starting value</li>
+<li>end: Ending value</li>
+<li>duration: Length of time</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">exponentialSegment</span><span class="p">(</span>
+        <span class="nv">trigger</span><span class="p">:</span> <span class="kt">AKOperation</span><span class="p">,</span>
+        <span class="nv">start</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span><span class="p">,</span>
+        <span class="nv">end</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span><span class="p">,</span>
+        <span class="nv">duration</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>start</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Starting value</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>end</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Ending value</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>duration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Length of time</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation17randomVertexPulseFT7minimumPS_11AKParameter_7maximumPS1__15updateFrequencyPS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/randomVertexPulse(minimum:maximum:updateFrequency:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation17randomVertexPulseFT7minimumPS_11AKParameter_7maximumPS1__15updateFrequencyPS1___S0_">randomVertexPulse(minimum:maximum:updateFrequency:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Line segments with vertices at random points</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>minimum: Minimum value (Default: 0)</li>
+<li>maximum: Maximum value (Default: 1)</li>
+<li>updateFrequency: Frequency to change values. (Default: 3)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">randomVertexPulse</span><span class="p">(</span>
+        <span class="nv">minimum</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nv">maximum</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nv">updateFrequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">3</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>minimum</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Minimum value (Default: 0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>maximum</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Maximum value (Default: 1)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>updateFrequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Frequency to change values. (Default: 3)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation12triangleWaveFT9frequencyPS_11AKParameter_9amplitudePS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/triangleWave(frequency:amplitude:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation12triangleWaveFT9frequencyPS_11AKParameter_9amplitudePS1___S0_">triangleWave(frequency:amplitude:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is a bandlimited triangle oscillator
+ported from the <q>triangle</q> function from the Faust programming language.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>frequency: In cycles per second, or Hz. (Default: 440, Minimum: 0.0, Maximum: 20000.0)</li>
+<li>amplitude: Output Amplitude. (Default: 0.5, Minimum: 0.0, Maximum: 1.0)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">triangleWave</span><span class="p">(</span>
+        <span class="nv">frequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">440</span><span class="p">,</span>
+        <span class="nv">amplitude</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.5</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>In cycles per second, or Hz. (Default: 440, Minimum: 0.0, Maximum: 20000.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amplitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Output Amplitude. (Default: 0.5, Minimum: 0.0, Maximum: 1.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation8sawtoothFT9frequencyPS_11AKParameter_9amplitudePS1__5phasePS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/sawtooth(frequency:amplitude:phase:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation8sawtoothFT9frequencyPS_11AKParameter_9amplitudePS1__5phasePS1___S0_">sawtooth(frequency:amplitude:phase:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Simple sawtooth oscillator, not-band limited, can be used for LFO or wave,
+but sawtoothWave is probably better for audio.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>frequency: In cycles per second, or Hz. (Default: 440, Minimum: 0.0, Maximum: 20000.0)</li>
+<li>amplitude: Output Amplitude. (Default: 0.5, Minimum: 0.0, Maximum: 1.0)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">sawtooth</span><span class="p">(</span>
+        <span class="nv">frequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">440</span><span class="p">,</span>
+        <span class="nv">amplitude</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="nv">phase</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>In cycles per second, or Hz. (Default: 440, Minimum: 0.0, Maximum: 20000.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amplitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Output Amplitude. (Default: 0.5, Minimum: 0.0, Maximum: 1.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation15reverseSawtoothFT9frequencyPS_11AKParameter_9amplitudePS1__5phasePS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/reverseSawtooth(frequency:amplitude:phase:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation15reverseSawtoothFT9frequencyPS_11AKParameter_9amplitudePS1__5phasePS1___S0_">reverseSawtooth(frequency:amplitude:phase:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Simple reverse sawtooth oscillator, not-band limited, can be used for LFO or wave.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>frequency: In cycles per second, or Hz. (Default: 440, Minimum: 0.0, Maximum: 20000.0)</li>
+<li>amplitude: Output Amplitude. (Default: 0.5, Minimum: 0.0, Maximum: 1.0)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reverseSawtooth</span><span class="p">(</span>
+        <span class="nv">frequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">440</span><span class="p">,</span>
+        <span class="nv">amplitude</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="nv">phase</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>In cycles per second, or Hz. (Default: 440, Minimum: 0.0, Maximum: 20000.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amplitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Output Amplitude. (Default: 0.5, Minimum: 0.0, Maximum: 1.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC8AudioKit11AKOperation8triangleFT9frequencyPS_11AKParameter_9amplitudePS1__5phasePS1___S0_"></a>
+                    <a name="//apple_ref/swift/Method/triangle(frequency:amplitude:phase:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC8AudioKit11AKOperation8triangleFT9frequencyPS_11AKParameter_9amplitudePS1__5phasePS1___S0_">triangle(frequency:amplitude:phase:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Simple triangle oscillator, not-band limited, can be used for LFO or wave,
+but triangleWave is probably better for audio.</p>
+
+<ul>
+<li>Parameters:
+
+<ul>
+<li>frequency: In cycles per second, or Hz. (Default: 440, Minimum: 0.0, Maximum: 20000.0)</li>
+<li>amplitude: Output Amplitude. (Default: 0.5, Minimum: 0.0, Maximum: 1.0)</li>
+</ul></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">triangle</span><span class="p">(</span>
+        <span class="nv">frequency</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">440</span><span class="p">,</span>
+        <span class="nv">amplitude</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="nv">phase</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AKParameter.html">AKParameter</a></span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AKOperation</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>frequency</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>In cycles per second, or Hz. (Default: 440, Minimum: 0.0, Maximum: 20000.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>amplitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Output Amplitude. (Default: 0.5, Minimum: 0.0, Maximum: 1.0)</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="http://audiokit.io/" target="_blank" rel="external">Aurelius Prochazka</a>. All rights reserved. (Last updated: 2016-11-15)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
