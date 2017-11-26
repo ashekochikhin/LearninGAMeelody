@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DD4-zV-zTL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="DD4-zV-zTL">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Service-->
+        <!--Сервис-->
         <scene sceneID="2wK-DX-r0F">
             <objects>
                 <viewController id="YSH-wd-BYW" customClass="ServiceViewController" customModule="LearninGAMeelody" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,70 +22,70 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f0v-FH-MaE">
-                                <rect key="frame" x="0.0" y="28" width="768" height="30"/>
+                                <rect key="frame" x="8" y="28" width="752" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="jiY-Yz-L9U"/>
                                 </constraints>
-                                <state key="normal" title="Erase Database"/>
+                                <state key="normal" title="Очистить базу знаний"/>
                                 <connections>
                                     <action selector="earseDatabas:" destination="YSH-wd-BYW" eventType="touchUpInside" id="4cY-p2-6xm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8Y-d6-WIh">
-                                <rect key="frame" x="0.0" y="66" width="768" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8Y-d6-WIh">
+                                <rect key="frame" x="8" y="66" width="752" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ux8-Fl-4Jm"/>
+                                    <constraint firstAttribute="height" constant="120" id="ux8-Fl-4Jm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BJB-Pz-hIc">
-                                <rect key="frame" x="0.0" y="104" width="768" height="4"/>
+                                <rect key="frame" x="0.0" y="194" width="768" height="4"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="93S-A1-smV"/>
                                 </constraints>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCr-vn-OhO">
-                                <rect key="frame" x="0.0" y="116" width="768" height="30"/>
+                                <rect key="frame" x="8" y="206" width="752" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Eke-7m-CY0"/>
                                 </constraints>
-                                <state key="normal" title="Update Progress of Learning"/>
+                                <state key="normal" title="Обновить прогресс обучения"/>
                                 <connections>
                                     <action selector="upgateRrogress:" destination="YSH-wd-BYW" eventType="touchUpInside" id="lRN-RU-DDa"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qi-JC-T9w">
-                                <rect key="frame" x="0.0" y="154" width="768" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9qi-JC-T9w">
+                                <rect key="frame" x="8" y="244" width="752" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="ro3-Cf-glV"/>
+                                    <constraint firstAttribute="height" constant="60" id="ro3-Cf-glV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.81852791879999998" green="0.81852791879999998" blue="0.81852791879999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="f0v-FH-MaE" secondAttribute="trailing" id="1Sr-Ih-zbp"/>
+                            <constraint firstAttribute="trailing" secondItem="f0v-FH-MaE" secondAttribute="trailing" constant="8" id="1Sr-Ih-zbp"/>
                             <constraint firstItem="f0v-FH-MaE" firstAttribute="top" secondItem="pvZ-cS-NpX" secondAttribute="bottom" constant="8" id="1fp-Ll-h42"/>
                             <constraint firstAttribute="trailing" secondItem="BJB-Pz-hIc" secondAttribute="trailing" id="5jQ-vC-25k"/>
                             <constraint firstItem="mCr-vn-OhO" firstAttribute="top" secondItem="BJB-Pz-hIc" secondAttribute="bottom" constant="8" id="8Rd-L0-ivQ"/>
-                            <constraint firstAttribute="trailing" secondItem="9qi-JC-T9w" secondAttribute="trailing" id="Jr2-d1-Gef"/>
-                            <constraint firstAttribute="trailing" secondItem="i8Y-d6-WIh" secondAttribute="trailing" id="MHR-SQ-mnc"/>
+                            <constraint firstAttribute="trailing" secondItem="9qi-JC-T9w" secondAttribute="trailing" constant="8" id="Jr2-d1-Gef"/>
+                            <constraint firstAttribute="trailing" secondItem="i8Y-d6-WIh" secondAttribute="trailing" constant="8" id="MHR-SQ-mnc"/>
                             <constraint firstItem="BJB-Pz-hIc" firstAttribute="top" secondItem="i8Y-d6-WIh" secondAttribute="bottom" constant="8" id="OE0-sI-QZv"/>
-                            <constraint firstItem="f0v-FH-MaE" firstAttribute="leading" secondItem="F2Y-Nq-ywr" secondAttribute="leading" id="U6e-qy-qaT"/>
-                            <constraint firstItem="mCr-vn-OhO" firstAttribute="leading" secondItem="F2Y-Nq-ywr" secondAttribute="leading" id="cmc-Lv-lvb"/>
-                            <constraint firstItem="i8Y-d6-WIh" firstAttribute="leading" secondItem="F2Y-Nq-ywr" secondAttribute="leading" id="jcB-AM-qea"/>
-                            <constraint firstItem="9qi-JC-T9w" firstAttribute="leading" secondItem="F2Y-Nq-ywr" secondAttribute="leading" id="nDY-Uf-CWV"/>
-                            <constraint firstAttribute="trailing" secondItem="mCr-vn-OhO" secondAttribute="trailing" id="oGe-hm-YEd"/>
+                            <constraint firstItem="f0v-FH-MaE" firstAttribute="leading" secondItem="F2Y-Nq-ywr" secondAttribute="leading" constant="8" id="U6e-qy-qaT"/>
+                            <constraint firstItem="mCr-vn-OhO" firstAttribute="leading" secondItem="F2Y-Nq-ywr" secondAttribute="leading" constant="8" id="cmc-Lv-lvb"/>
+                            <constraint firstItem="i8Y-d6-WIh" firstAttribute="leading" secondItem="F2Y-Nq-ywr" secondAttribute="leading" constant="8" id="jcB-AM-qea"/>
+                            <constraint firstItem="9qi-JC-T9w" firstAttribute="leading" secondItem="F2Y-Nq-ywr" secondAttribute="leading" constant="8" id="nDY-Uf-CWV"/>
+                            <constraint firstAttribute="trailing" secondItem="mCr-vn-OhO" secondAttribute="trailing" constant="8" id="oGe-hm-YEd"/>
                             <constraint firstItem="9qi-JC-T9w" firstAttribute="top" secondItem="mCr-vn-OhO" secondAttribute="bottom" constant="8" id="pnm-iH-7Xu"/>
                             <constraint firstItem="BJB-Pz-hIc" firstAttribute="leading" secondItem="F2Y-Nq-ywr" secondAttribute="leading" id="pu9-q6-HTn"/>
                             <constraint firstItem="i8Y-d6-WIh" firstAttribute="top" secondItem="f0v-FH-MaE" secondAttribute="bottom" constant="8" id="wYU-DH-pah"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Service" image="first" selectedImage="first" id="gAU-mO-MFA"/>
+                    <tabBarItem key="tabBarItem" title="Сервис" image="first" selectedImage="first" id="gAU-mO-MFA"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="lernedDescriptLabl" destination="9qi-JC-T9w" id="uUp-R3-MfD"/>
@@ -97,7 +97,7 @@
             </objects>
             <point key="canvasLocation" x="-178.125" y="803.75"/>
         </scene>
-        <!--Generate-->
+        <!--Генерация-->
         <scene sceneID="TNA-MH-jn2">
             <objects>
                 <viewController id="FNz-X1-D1I" customClass="GenerateViewController" customModule="LearninGAMeelody" customModuleProvider="target" sceneMemberID="viewController">
@@ -115,7 +115,7 @@
                                     <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="7363e68831cb36e69c736862f328e8a0" translatesAutoresizingMaskIntoConstraints="NO" id="IxZ-Mm-hGf">
                                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set desirable melody atributes and press generate button to listen to" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj3-cE-NeC">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите желаемое описание мелодии и нажмите клавишу &quot;Сгенерировать&quot;, для прослушивания мелолдии." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vj3-cE-NeC">
                                         <rect key="frame" x="0.0" y="8" width="768" height="117"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="117" id="xYP-gx-qPi"/>
@@ -127,7 +127,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="r5v-WM-U0I">
                                         <rect key="frame" x="4" y="133" width="760" height="300"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rhythm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uv5-WX-c1C">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ритм" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uv5-WX-c1C">
                                                 <rect key="frame" x="0.0" y="0.0" width="760" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -136,12 +136,12 @@
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aUn-js-BYE">
                                                 <rect key="frame" x="0.0" y="43" width="760" height="43.5"/>
                                                 <segments>
-                                                    <segment title="Calm"/>
-                                                    <segment title="Ordinal"/>
-                                                    <segment title="Haotic"/>
+                                                    <segment title="Примитивный"/>
+                                                    <segment title="Обычный"/>
+                                                    <segment title="Хаотичный"/>
                                                 </segments>
                                             </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1d-Vy-o0X">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настроение" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q1d-Vy-o0X">
                                                 <rect key="frame" x="0.0" y="85.5" width="760" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -150,12 +150,12 @@
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="SwI-Ne-dTh">
                                                 <rect key="frame" x="0.0" y="128.5" width="760" height="44"/>
                                                 <segments>
-                                                    <segment title="Melanholy"/>
-                                                    <segment title="Ordinal"/>
-                                                    <segment title="Merry"/>
+                                                    <segment title="Грустная"/>
+                                                    <segment title="Обычная"/>
+                                                    <segment title="Весёлая"/>
                                                 </segments>
                                             </segmentedControl>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melody" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMB-fQ-Fqc">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мелодичность" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMB-fQ-Fqc">
                                                 <rect key="frame" x="0.0" y="171.5" width="760" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
@@ -164,15 +164,15 @@
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="O1w-Or-HDa">
                                                 <rect key="frame" x="0.0" y="214.5" width="760" height="43.5"/>
                                                 <segments>
-                                                    <segment title="Boring"/>
-                                                    <segment title="Melodic"/>
-                                                    <segment title="Haotic"/>
+                                                    <segment title="Скучная"/>
+                                                    <segment title="Обычная"/>
+                                                    <segment title="Хаотичная"/>
                                                 </segments>
                                             </segmentedControl>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lx6-t8-x75">
                                                 <rect key="frame" x="0.0" y="257" width="760" height="43"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <state key="normal" title="Generate">
+                                                <state key="normal" title="Сгенерировать">
                                                     <color key="titleColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
@@ -208,7 +208,7 @@
                             <constraint firstAttribute="trailing" secondItem="yYw-zC-NNs" secondAttribute="trailing" id="smb-g1-Sxf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Generate" image="second" selectedImage="second" id="8oX-7p-y3P"/>
+                    <tabBarItem key="tabBarItem" title="Генерация" image="second" selectedImage="second" id="8oX-7p-y3P"/>
                     <connections>
                         <outlet property="melodyToGenerate" destination="O1w-Or-HDa" id="5us-qu-OTF"/>
                         <outlet property="moodToGenerate" destination="SwI-Ne-dTh" id="jFu-c7-IRc"/>
@@ -219,7 +219,7 @@
             </objects>
             <point key="canvasLocation" x="839" y="301"/>
         </scene>
-        <!--Learn-->
+        <!--Обучение-->
         <scene sceneID="9ay-kQ-9Bc">
             <objects>
                 <viewController id="HXJ-pY-qjJ" customClass="LearnViewController" customModule="LearninGAMeelody" customModuleProvider="target" sceneMemberID="viewController">
@@ -240,14 +240,14 @@
                                     <constraint firstAttribute="height" constant="30" id="rl6-pH-brk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <state key="normal" title="Generate Random Melody">
+                                <state key="normal" title="Сгенерировать случайную мелодию">
                                     <color key="titleColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="listenToRandomMelody:" destination="HXJ-pY-qjJ" eventType="touchUpInside" id="g6W-zi-l8B"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Listen to the melody and mark each atribute. Then press Learn button to store your atributes " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBR-2r-l4h">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Прослушайте мелодию и отметьте подходящие характеристики. Потом нажмите на клавишу &quot;Выучить&quot;, чтобы запомнить описание." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GBR-2r-l4h">
                                 <rect key="frame" x="0.0" y="58" width="768" height="67"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="67" id="qri-4y-7pR"/>
@@ -259,21 +259,21 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="nHO-Pu-5uU">
                                 <rect key="frame" x="4" y="133" width="760" height="300"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rhythm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72M-zo-qxu">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ритм" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72M-zo-qxu">
                                         <rect key="frame" x="0.0" y="0.0" width="760" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NDj-GP-J43">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="NDj-GP-J43">
                                         <rect key="frame" x="0.0" y="43" width="760" height="43.5"/>
                                         <segments>
-                                            <segment title="Calm"/>
-                                            <segment title="Ordinal"/>
-                                            <segment title="Haotic"/>
+                                            <segment title="Примитивный"/>
+                                            <segment title="Обычный"/>
+                                            <segment title="Хаотичный"/>
                                         </segments>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDQ-yU-faK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настроение" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jDQ-yU-faK">
                                         <rect key="frame" x="0.0" y="85.5" width="760" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
@@ -282,29 +282,29 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BYN-Vk-hQ2">
                                         <rect key="frame" x="0.0" y="128.5" width="760" height="44"/>
                                         <segments>
-                                            <segment title="Melanholy"/>
-                                            <segment title="Ordinal"/>
-                                            <segment title="Merry"/>
+                                            <segment title="Грустное"/>
+                                            <segment title="Обычное"/>
+                                            <segment title="Весёлое"/>
                                         </segments>
                                     </segmentedControl>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Melody" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjX-H1-lhP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мелодичность" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LjX-H1-lhP">
                                         <rect key="frame" x="0.0" y="171.5" width="760" height="43"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j1r-rL-GeQ">
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="j1r-rL-GeQ">
                                         <rect key="frame" x="0.0" y="214.5" width="760" height="43.5"/>
                                         <segments>
-                                            <segment title="Boring"/>
-                                            <segment title="Melodic"/>
-                                            <segment title="Haotic"/>
+                                            <segment title="Скучная"/>
+                                            <segment title="Обычная"/>
+                                            <segment title="Хаотичная"/>
                                         </segments>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwP-Q3-9eu">
                                         <rect key="frame" x="0.0" y="257" width="760" height="43"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                        <state key="normal" title="Learn">
+                                        <state key="normal" title="Выучить">
                                             <color key="titleColor" red="0.0" green="0.20000000000000001" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
@@ -334,7 +334,7 @@
                             <constraint firstAttribute="bottom" secondItem="bjS-E2-7Zl" secondAttribute="bottom" id="yWl-MG-9lj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Learn" image="first" selectedImage="first" id="JOj-n9-AHd"/>
+                    <tabBarItem key="tabBarItem" title="Обучение" image="first" selectedImage="first" id="JOj-n9-AHd"/>
                     <connections>
                         <outlet property="melodyAtribute" destination="j1r-rL-GeQ" id="K63-TV-SUl"/>
                         <outlet property="moodAtribute" destination="BYN-Vk-hQ2" id="BYt-VE-RZV"/>

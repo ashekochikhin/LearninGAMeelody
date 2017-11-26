@@ -9,9 +9,10 @@
 import UIKit
 import CoreData
 
+
 class LearnViewController: UIViewController {
     
-    
+   
     
     @IBOutlet weak var rhytmAtribute: UISegmentedControl!
     @IBOutlet weak var moodAtribute: UISegmentedControl!
@@ -20,20 +21,18 @@ class LearnViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func listenToRandomMelody(_ sender: Any) {
+        // MARK: - Random melody for learning generation
         currentMelodyRules.setRandomMelodyRules()
-        print(currentMelodyRules.melody, currentMelodyRules.mode, currentMelodyRules.rhythm)
-        playMelody(melody: makeMelodyInNotesOfRules(_melody: Int(currentMelodyRules.melody), _mode: Int(currentMelodyRules.mode), _rhythm: Int(currentMelodyRules.rhythm)))
-        
+        print("Current rules set {meodyl mode rhuthm}: ", currentMelodyRules.melody, currentMelodyRules.mode, currentMelodyRules.rhythm)
+        let currentRundomMelody = makeMelodyInNotesOfRules(_melody: Int(currentMelodyRules.melody), _mode: Int(currentMelodyRules.mode), _rhythm: Int(currentMelodyRules.rhythm))
+        conductor.playMelody(melody: currentRundomMelody)        
     }
 
     @IBAction func learnUserAtributes(_ sender: Any) {
@@ -41,7 +40,7 @@ class LearnViewController: UIViewController {
         do {
             let userLangDescript = UserLanguageDescription(_rhythm: rhytmAtribute.titleForSegment(at: rhytmAtribute.selectedSegmentIndex)!, _mode: moodAtribute.titleForSegment(at: moodAtribute.selectedSegmentIndex)!, _melody: melodyAtribute.titleForSegment(at: melodyAtribute.selectedSegmentIndex)!)
 
-           print("\(userLangDescript.melodyDescription, userLangDescript.modeDescription, userLangDescript.rhythmDescription)")
+          // print("\(userLangDescript.melodyDescription, userLangDescript.modeDescription, userLangDescript.rhythmDescription)")
 
                 let predicatesForGenExisting = NSPredicate(format: "melodyRule == \(currentMelodyRules.melody) AND modeRule == \(currentMelodyRules.mode) AND rhythmicRule == \(currentMelodyRules.rhythm)")
                 let fetchRequestGen: NSFetchRequest<GenRepresentation>
@@ -74,14 +73,4 @@ class LearnViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 }

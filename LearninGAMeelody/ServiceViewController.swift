@@ -37,11 +37,11 @@ class ServiceViewController: UIViewController {
         updateProgress()
     }
     func updateProgress(){
-        progressOfLearning.text = "Currently \(numberOfGensLearned()) gens of \(totalNumberOfGens()) have their natural language description"
+        progressOfLearning.text = "На данный момент \(numberOfGensLearned()) генов из \(totalNumberOfGens()) имеют соответсвующее описание на естественном языке"
         
         progresOfLearningLine.progress = Float(numberOfGensLearned()/totalNumberOfGens())
         
-        lernedDescriptLabl.text = ("Learned \(numberOfDescriptLearned()) of 27")
+        lernedDescriptLabl.text = ("Изучено \(numberOfDescriptLearned()) описаний на естественном языке из 27")
     }
     /*
     // MARK: - Navigation

@@ -17,10 +17,13 @@
 		D91685211E1C5AD100EFB1E3 /* GenerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91685201E1C5AD100EFB1E3 /* GenerateViewController.swift */; };
 		D91836971E242CAA001B92BE /* LearninGAMeelody.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = D91836961E242CAA001B92BE /* LearninGAMeelody.xcdatamodel */; };
 		D91836991E24622A001B92BE /* Melody.swift in Sources */ = {isa = PBXBuildFile; fileRef = D91836981E24622A001B92BE /* Melody.swift */; };
-		D918369B1E246D39001B92BE /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D918369A1E246D39001B92BE /* AudioKit.framework */; };
-		D918369C1E246D39001B92BE /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D918369A1E246D39001B92BE /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D96FC2C61E1D2C880009C650 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96FC2C51E1D2C880009C650 /* DataBase.swift */; };
 		D96FC2D11E1D5F900009C650 /* MelodyRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96FC2D01E1D5F900009C650 /* MelodyRules.swift */; };
+		D9AE3F281FC981DF00148970 /* Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9AE3F271FC981DF00148970 /* Conductor.swift */; };
+		D9DD25F11FC85A2E00F0AA31 /* AudioKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DD25F01FC85A2E00F0AA31 /* AudioKit.framework */; };
+		D9DD25F21FC85A2E00F0AA31 /* AudioKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D9DD25F01FC85A2E00F0AA31 /* AudioKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D9DD25F61FC85DE000F0AA31 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9DD25F51FC85DE000F0AA31 /* Math.swift */; };
+		D9E4A9711FCAF0170097E754 /* Grand Piano.exs in Resources */ = {isa = PBXBuildFile; fileRef = D9E4A9701FCAF0170097E754 /* Grand Piano.exs */; };
 		D9EB2CAA1E215871007DF1F7 /* ServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EB2CA91E215871007DF1F7 /* ServiceViewController.swift */; };
 		D9EB2CAC1E218DFF007DF1F7 /* LangugeDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EB2CAB1E218DFF007DF1F7 /* LangugeDescription.swift */; };
 /* End PBXBuildFile section */
@@ -43,13 +46,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D918369D1E246D39001B92BE /* Embed Frameworks */ = {
+		D9DD25F31FC85A2F00F0AA31 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D918369C1E246D39001B92BE /* AudioKit.framework in Embed Frameworks */,
+				D9DD25F21FC85A2E00F0AA31 /* AudioKit.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,9 +76,12 @@
 		D91685201E1C5AD100EFB1E3 /* GenerateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateViewController.swift; sourceTree = "<group>"; };
 		D91836961E242CAA001B92BE /* LearninGAMeelody.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LearninGAMeelody.xcdatamodel; sourceTree = SOURCE_ROOT; };
 		D91836981E24622A001B92BE /* Melody.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Melody.swift; sourceTree = "<group>"; };
-		D918369A1E246D39001B92BE /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioKit.framework; path = "AudioKit-iOS-3/AudioKit.framework"; sourceTree = "<group>"; };
 		D96FC2C51E1D2C880009C650 /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
 		D96FC2D01E1D5F900009C650 /* MelodyRules.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MelodyRules.swift; sourceTree = "<group>"; };
+		D9AE3F271FC981DF00148970 /* Conductor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conductor.swift; sourceTree = "<group>"; };
+		D9DD25F01FC85A2E00F0AA31 /* AudioKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AudioKit.framework; sourceTree = "<group>"; };
+		D9DD25F51FC85DE000F0AA31 /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		D9E4A9701FCAF0170097E754 /* Grand Piano.exs */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Grand Piano.exs"; sourceTree = "<group>"; };
 		D9EB2CA91E215871007DF1F7 /* ServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceViewController.swift; sourceTree = "<group>"; };
 		D9EB2CAB1E218DFF007DF1F7 /* LangugeDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangugeDescription.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D918369B1E246D39001B92BE /* AudioKit.framework in Frameworks */,
+				D9DD25F11FC85A2E00F0AA31 /* AudioKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +115,7 @@
 		D91684A31E1C4F0D00EFB1E3 = {
 			isa = PBXGroup;
 			children = (
-				D918369A1E246D39001B92BE /* AudioKit.framework */,
+				D9DD25F01FC85A2E00F0AA31 /* AudioKit.framework */,
 				D91684AE1E1C4F1100EFB1E3 /* LearninGAMeelody */,
 				D91684C61E1C4F1100EFB1E3 /* LearninGAMeelodyTests */,
 				D91684D11E1C4F1100EFB1E3 /* LearninGAMeelodyUITests */,
@@ -130,6 +136,8 @@
 		D91684AE1E1C4F1100EFB1E3 /* LearninGAMeelody */ = {
 			isa = PBXGroup;
 			children = (
+				D9E4A9701FCAF0170097E754 /* Grand Piano.exs */,
+				D9DD25F41FC85DC700F0AA31 /* Helpers */,
 				D96FC2CD1E1D5B910009C650 /* Models */,
 				D91685241E1C71E100EFB1E3 /* Controllers */,
 				D91684AF1E1C4F1100EFB1E3 /* AppDelegate.swift */,
@@ -176,9 +184,18 @@
 				D96FC2C51E1D2C880009C650 /* DataBase.swift */,
 				D96FC2D01E1D5F900009C650 /* MelodyRules.swift */,
 				D91836981E24622A001B92BE /* Melody.swift */,
+				D9AE3F271FC981DF00148970 /* Conductor.swift */,
 				D9EB2CAB1E218DFF007DF1F7 /* LangugeDescription.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		D9DD25F41FC85DC700F0AA31 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D9DD25F51FC85DE000F0AA31 /* Math.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -191,7 +208,7 @@
 				D91684A81E1C4F0D00EFB1E3 /* Sources */,
 				D91684A91E1C4F0D00EFB1E3 /* Frameworks */,
 				D91684AA1E1C4F0D00EFB1E3 /* Resources */,
-				D918369D1E246D39001B92BE /* Embed Frameworks */,
+				D9DD25F31FC85A2F00F0AA31 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -297,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9E4A9711FCAF0170097E754 /* Grand Piano.exs in Resources */,
 				D91684BD1E1C4F1100EFB1E3 /* LaunchScreen.storyboard in Resources */,
 				D91684BA1E1C4F1100EFB1E3 /* Assets.xcassets in Resources */,
 				D91684B51E1C4F1100EFB1E3 /* Main.storyboard in Resources */,
@@ -331,8 +349,10 @@
 				D9EB2CAC1E218DFF007DF1F7 /* LangugeDescription.swift in Sources */,
 				D91685211E1C5AD100EFB1E3 /* GenerateViewController.swift in Sources */,
 				D9EB2CAA1E215871007DF1F7 /* ServiceViewController.swift in Sources */,
+				D9AE3F281FC981DF00148970 /* Conductor.swift in Sources */,
 				D91684B01E1C4F1100EFB1E3 /* AppDelegate.swift in Sources */,
 				D916851D1E1C5A5C00EFB1E3 /* LearnViewController.swift in Sources */,
+				D9DD25F61FC85DE000F0AA31 /* Math.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +507,8 @@
 				DEVELOPMENT_TEAM = DPHVKE8ANM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/AudioKit-iOS-3",
+					"$(PROJECT_DIR)/",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LearninGAMeelody/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -504,7 +525,8 @@
 				DEVELOPMENT_TEAM = DPHVKE8ANM;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/AudioKit-iOS-3",
+					"$(PROJECT_DIR)/",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = LearninGAMeelody/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
